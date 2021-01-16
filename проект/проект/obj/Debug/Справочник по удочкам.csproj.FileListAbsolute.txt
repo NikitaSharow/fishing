@@ -1,0 +1,12 @@
+C:\Users\user\Desktop\проект\проект\bin\Debug\проект.exe.config
+C:\Users\user\Desktop\проект\проект\bin\Debug\проект.exe
+C:\Users\user\Desktop\проект\проект\bin\Debug\проект.pdb
+C:\Users\user\Desktop\проект\проект\obj\Debug\Справочник по удочкам.csprojAssemblyReference.cache
+C:\Users\user\Desktop\проект\проект\obj\Debug\проект.Properties.Resources.resources
+C:\Users\user\Desktop\проект\проект\obj\Debug\Справочник по удочкам.csproj.GenerateResource.cache
+C:\Users\user\Desktop\проект\проект\obj\Debug\Справочник по удочкам.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\проект\проект\obj\Debug\проект.exe
+C:\Users\user\Desktop\проект\проект\obj\Debug\проект.pdb
+C:\Users\user\Desktop\проект\проект\obj\Debug\проект.MainForm.resources
+C:\Users\user\Desktop\проект\проект\obj\Debug\проект.Place.resources
+C:\Users\user\Desktop\проект\проект\obj\Debug\проект.najivka.resources

@@ -56,7 +56,7 @@ namespace проект
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.2F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(584, 18);
+            this.label1.Location = new System.Drawing.Point(577, 10);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 29);
@@ -80,7 +80,7 @@ namespace проект
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 18);
+            this.label2.Location = new System.Drawing.Point(40, 13);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(228, 29);
@@ -112,7 +112,7 @@ namespace проект
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(45, 50);
+            this.textBox1.Location = new System.Drawing.Point(20, 50);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(166, 35);
             this.textBox1.TabIndex = 5;
@@ -161,7 +161,7 @@ namespace проект
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(251, 50);
+            this.button3.Location = new System.Drawing.Point(201, 50);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(95, 35);
             this.button3.TabIndex = 10;
@@ -173,7 +173,7 @@ namespace проект
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label5.Location = new System.Drawing.Point(995, 169);
+            this.label5.Location = new System.Drawing.Point(949, 169);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 24);
             this.label5.TabIndex = 11;
@@ -203,7 +203,7 @@ namespace проект
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label8.Location = new System.Drawing.Point(995, 217);
+            this.label8.Location = new System.Drawing.Point(949, 218);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(75, 24);
             this.label8.TabIndex = 14;
@@ -214,7 +214,7 @@ namespace проект
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label9.Location = new System.Drawing.Point(995, 265);
+            this.label9.Location = new System.Drawing.Point(949, 266);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(75, 24);
             this.label9.TabIndex = 16;
@@ -224,7 +224,7 @@ namespace проект
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label10.Location = new System.Drawing.Point(891, 241);
+            this.label10.Location = new System.Drawing.Point(891, 242);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(190, 24);
             this.label10.TabIndex = 15;

@@ -32,23 +32,28 @@ namespace проект
             Place form = new Place();
             form.Show();
         }
-
-        private void button3_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Клик на кнопку "поиск"
+        /// </summary>
+        private void SearchClick(object sender, EventArgs e)
         {
-            if (textBox1.Text == "удочка")
-            { pictureBox2.Visible = true; label4.Visible = true; pictureBox1.Visible = true; label3.Visible = true; }
+            if (textBox1.Text.ToLower() == "удочка")
+            { pictureBox2.Visible = true; pictureBox1.Visible = true;}
 
-            else if (textBox1.Text.Contains("удочка1"))
-            { pictureBox1.Visible = true; label3.Visible = true; pictureBox2.Visible = false; label4.Visible = false; }
+            else if (textBox1.Text.Contains("Удочка Deukio"))
+            { pictureBox1.Visible = true; pictureBox2.Visible = false;}
 
-            else if (textBox1.Text.Contains("удочка2"))
-            { pictureBox2.Visible = true; label4.Visible = true; pictureBox1.Visible = false; label3.Visible = false; }
+            else if (textBox1.Text.Contains("Удочка RAPALA"))
+            { pictureBox2.Visible = true; pictureBox1.Visible = false; }
 
-            else if (textBox1.Text.Contains(""))
-            { pictureBox2.Visible = true; label4.Visible = true; pictureBox1.Visible = true; label3.Visible = true; }
+            else if (textBox1.Text == "")
+            { pictureBox2.Visible = true; pictureBox1.Visible = true; }
 
             else 
-            { pictureBox2.Visible = false; label4.Visible = false; pictureBox1.Visible = false; label3.Visible = false; }
+            { pictureBox2.Visible = false; pictureBox1.Visible = false; }
+
+            label3.Visible = pictureBox1.Visible;
+            label4.Visible = pictureBox2.Visible;
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -58,22 +63,27 @@ namespace проект
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            fishingForms form = new fishingForms("удочка 1");
+            fishingForms form = new fishingForms("Удочка Deukio");
             form.Show();
-            label5.Text = "Удочка1";
+            label5.Text = "Удочка Deukio";
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            fishingForms form = new fishingForms("удочка 2");
+            fishingForms form = new fishingForms("Удочка RAPALA");
             form.Show();
-            label5.Text = "Удочка2";
+            label5.Text = "Удочка RAPALA";
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             najivka form = new najivka();
             form.Show();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SearchClick(sender, e);
         }
     }
 }

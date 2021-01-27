@@ -11,3 +11,16 @@ C:\Users\user\Desktop\проект\проект\obj\Debug\проект.MainForm.
 C:\Users\user\Desktop\проект\проект\obj\Debug\проект.Place.resources
 C:\Users\user\Desktop\проект\проект\obj\Debug\проект.najivka.resources
 C:\Users\user\Desktop\проект\проект\obj\Debug\проект.fishingForms.resources
+D:\НГ_pk22\проект\проект\bin\Debug\проект.exe.config
+D:\НГ_pk22\проект\проект\bin\Debug\проект.exe
+D:\НГ_pk22\проект\проект\bin\Debug\проект.pdb
+D:\НГ_pk22\проект\проект\obj\Debug\Справочник по удочкам.csprojAssemblyReference.cache
+D:\НГ_pk22\проект\проект\obj\Debug\проект.MainForm.resources
+D:\НГ_pk22\проект\проект\obj\Debug\проект.najivka.resources
+D:\НГ_pk22\проект\проект\obj\Debug\проект.Place.resources
+D:\НГ_pk22\проект\проект\obj\Debug\проект.Properties.Resources.resources
+D:\НГ_pk22\проект\проект\obj\Debug\Справочник по удочкам.csproj.GenerateResource.cache
+D:\НГ_pk22\проект\проект\obj\Debug\Справочник по удочкам.csproj.CoreCompileInputs.cache
+D:\НГ_pk22\проект\проект\obj\Debug\проект.exe
+D:\НГ_pk22\проект\проект\obj\Debug\проект.pdb
+D:\НГ_pk22\проект\проект\obj\Debug\проект.GeneralForms.resources

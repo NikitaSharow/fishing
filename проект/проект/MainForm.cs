@@ -63,14 +63,14 @@ namespace проект
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            fishingForms form = new fishingForms("Удочка Deukio");
+            GeneralForms form = new GeneralForms("Удочка Deukio");
             form.Show();
             label5.Text = "Удочка Deukio";
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            fishingForms form = new fishingForms("Удочка RAPALA");
+            GeneralForms form = new GeneralForms("Удочка RAPALA");
             form.Show();
             label5.Text = "Удочка RAPALA";
         }

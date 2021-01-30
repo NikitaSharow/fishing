@@ -24,3 +24,16 @@ D:\НГ_pk22\проект\проект\obj\Debug\Справочник по уд�
 D:\НГ_pk22\проект\проект\obj\Debug\проект.exe
 D:\НГ_pk22\проект\проект\obj\Debug\проект.pdb
 D:\НГ_pk22\проект\проект\obj\Debug\проект.GeneralForms.resources
+C:\Users\Админ\Desktop\fishing-main\проект\проект\bin\Debug\проект.exe.config
+C:\Users\Админ\Desktop\fishing-main\проект\проект\bin\Debug\проект.exe
+C:\Users\Админ\Desktop\fishing-main\проект\проект\bin\Debug\проект.pdb
+C:\Users\Админ\Desktop\fishing-main\проект\проект\obj\Debug\Справочник по удочкам.csprojAssemblyReference.cache
+C:\Users\Админ\Desktop\fishing-main\проект\проект\obj\Debug\проект.GeneralForms.resources
+C:\Users\Админ\Desktop\fishing-main\проект\проект\obj\Debug\проект.MainForm.resources
+C:\Users\Админ\Desktop\fishing-main\проект\проект\obj\Debug\проект.najivka.resources
+C:\Users\Админ\Desktop\fishing-main\проект\проект\obj\Debug\проект.Place.resources
+C:\Users\Админ\Desktop\fishing-main\проект\проект\obj\Debug\проект.Properties.Resources.resources
+C:\Users\Админ\Desktop\fishing-main\проект\проект\obj\Debug\Справочник по удочкам.csproj.GenerateResource.cache
+C:\Users\Админ\Desktop\fishing-main\проект\проект\obj\Debug\Справочник по удочкам.csproj.CoreCompileInputs.cache
+C:\Users\Админ\Desktop\fishing-main\проект\проект\obj\Debug\проект.exe
+C:\Users\Админ\Desktop\fishing-main\проект\проект\obj\Debug\проект.pdb

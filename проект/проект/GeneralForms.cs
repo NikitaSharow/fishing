@@ -21,21 +21,19 @@ namespace проект
             InitializeComponent();
 
             pictureBox1.Load("../../../Picture/" + Name + ".jpg");
+            label1.Text = File.ReadAllText("../../../Files/" + Name + ".txt");
 
             if (Name == "Удочка Deukio")
             {
                 label2.Text = "Цена: 859 руб.";
-                label1.Text = File.ReadAllText("../../../Files/" + Name + ".txt");
             }
             if (Name == "Удочка RAPALA")
             {
                 label2.Text = "Цена: 1499 руб.";
-                label1.Text = File.ReadAllText("../../../Files/" + Name + ".txt");
             }
             if (Name == "Волга" || Name == "Енисей" || Name == "Обь")
             {
                 label2.Text = "";
-                label1.Text = File.ReadAllText("../../../Files/" + Name + ".txt");
                 button1.Text = "Выбрать";
             }
 

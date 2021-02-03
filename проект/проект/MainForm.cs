@@ -63,27 +63,32 @@ namespace проект
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            GeneralForms form = new GeneralForms("Удочка Deukio");
+
+            GeneralForms form = new GeneralForms("");
             form.Show();
-            label5.Text = "Удочка Deukio";
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            GeneralForms form = new GeneralForms("Удочка RAPALA");
-            form.Show();
-            label5.Text = "Удочка RAPALA";
+           // GeneralForms form = new GeneralForms("Удочка RAPALA");
+           // form.Show();
+           // label5.Text = "Удочка RAPALA";
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            najivka form = new najivka();
+            results form = new results();
             form.Show();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             SearchClick(sender, e);
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace проект
 {
-    partial class najivka
+    partial class results
     {
         /// <summary>
         /// Required designer variable.

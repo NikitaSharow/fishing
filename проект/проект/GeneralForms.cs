@@ -19,9 +19,13 @@ namespace проект
         public GeneralForms(string Name)
         {
             InitializeComponent();
-
-            pictureBox1.Load("../../../Picture/" + Name + ".jpg");
-            label1.Text = File.ReadAllText("../../../Files/" + Name + ".txt");
+            try
+            {
+                pictureBox1.Load("../../../Picture/" + Name + ".jpg");
+                label1.Text = File.ReadAllText("../../../Files/" + Name + ".txt");
+            }
+            catch { label1.Text = "Ошибка"; }
+                
 
             if (Name == "Удочка Deukio")
             {

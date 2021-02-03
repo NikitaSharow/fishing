@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace проект
 {
-    public partial class najivka : Form
+    public partial class results : Form
     {
-        public najivka()
+        public results()
         {
             InitializeComponent();
         }

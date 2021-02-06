@@ -10,11 +10,27 @@ using System.Windows.Forms;
 
 namespace проект
 {
+    public struct objects
+    {
+        public PictureBox picture;
+        public string name;
+        public int price;
+    }
     public partial class MainForm : Form
     {
+        public objects[] obj = new objects[11];
         public MainForm()
         {
             InitializeComponent();
+
+            obj[0] = new objects();
+            obj[0].name = "Удочка Deukio";
+            obj[0].picture = pictureBox1;
+            obj[0].price = 859; 
+            obj[1] = new objects();
+            obj[1].name = "Удочка RAPALA";
+            obj[1].picture = pictureBox2;
+            obj[1].price = 1499;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -37,20 +53,13 @@ namespace проект
         /// </summary>
         private void SearchClick(object sender, EventArgs e)
         {
-            if (textBox1.Text.ToLower() == "удочка")
-            { pictureBox2.Visible = true; pictureBox1.Visible = true;}
+            for(int i = 0; i <= 1; i++)
+            {
+                obj[i].picture.Visible = false;
 
-            else if (textBox1.Text.Contains("Удочка Deukio"))
-            { pictureBox1.Visible = true; pictureBox2.Visible = false;}
-
-            else if (textBox1.Text.Contains("Удочка RAPALA"))
-            { pictureBox2.Visible = true; pictureBox1.Visible = false; }
-
-            else if (textBox1.Text == "")
-            { pictureBox2.Visible = true; pictureBox1.Visible = true; }
-
-            else 
-            { pictureBox2.Visible = false; pictureBox1.Visible = false; }
+                if (obj[i].name.Contains(textBox1.Text))
+                    obj[i].picture.Visible = true;
+            }
 
             label3.Visible = pictureBox1.Visible;
             label4.Visible = pictureBox2.Visible;
@@ -63,16 +72,14 @@ namespace проект
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
-            GeneralForms form = new GeneralForms("");
+            GeneralForms form = new GeneralForms(obj[1].name);
             form.Show();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-           // GeneralForms form = new GeneralForms("Удочка RAPALA");
-           // form.Show();
-           // label5.Text = "Удочка RAPALA";
+           GeneralForms form = new GeneralForms(obj[2].name);
+           form.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

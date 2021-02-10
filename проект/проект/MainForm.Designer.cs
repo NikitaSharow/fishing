@@ -59,6 +59,8 @@ namespace проект
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -70,19 +72,20 @@ namespace проект
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.2F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(419, 1);
+            this.label1.Location = new System.Drawing.Point(338, 1);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 24);
+            this.label1.Size = new System.Drawing.Size(275, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Категория";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // comboBox1
@@ -90,12 +93,14 @@ namespace проект
             this.comboBox1.BackColor = System.Drawing.SystemColors.Window;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
+            "Всё",
             "Удилища",
             "Катушки",
             "Лески",
             "Крючки",
             "Поплавки",
-            "Наживки"});
+            "Наживки",
+            "Удочки"});
             this.comboBox1.Location = new System.Drawing.Point(338, 30);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.comboBox1.Name = "comboBox1";
@@ -106,13 +111,13 @@ namespace проект
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 2);
+            this.label2.Location = new System.Drawing.Point(12, 2);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(181, 25);
+            this.label2.Size = new System.Drawing.Size(217, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Введите название";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox1
@@ -125,7 +130,6 @@ namespace проект
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Tag = "";
-            this.pictureBox1.Visible = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label3
@@ -137,7 +141,6 @@ namespace проект
             this.label3.TabIndex = 4;
             this.label3.Text = "Удочка Deukio";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Visible = false;
             // 
             // textBox1
             // 
@@ -149,9 +152,9 @@ namespace проект
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(622, 26);
+            this.button1.Location = new System.Drawing.Point(716, 27);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(229, 37);
+            this.button1.Size = new System.Drawing.Size(230, 37);
             this.button1.TabIndex = 6;
             this.button1.Text = "Выбрать место ловли";
             this.button1.UseVisualStyleBackColor = true;
@@ -166,7 +169,6 @@ namespace проект
             this.label4.TabIndex = 8;
             this.label4.Text = "Удочка RAPALA";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label4.Visible = false;
             // 
             // pictureBox2
             // 
@@ -177,14 +179,13 @@ namespace проект
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Visible = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(857, 26);
+            this.button2.Location = new System.Drawing.Point(952, 28);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(207, 37);
+            this.button2.Size = new System.Drawing.Size(112, 37);
             this.button2.TabIndex = 9;
             this.button2.Text = "Итог";
             this.button2.UseVisualStyleBackColor = true;
@@ -380,12 +381,38 @@ namespace проект
             this.pictureBox9.TabIndex = 23;
             this.pictureBox9.TabStop = false;
             // 
+            // label14
+            // 
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.2F);
+            this.label14.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label14.Location = new System.Drawing.Point(622, 1);
+            this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(88, 24);
+            this.label14.TabIndex = 30;
+            this.label14.Text = "Цена";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(622, 32);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(88, 30);
+            this.numericUpDown1.TabIndex = 31;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1076, 642);
+            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.label12);
@@ -432,6 +459,7 @@ namespace проект
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -468,6 +496,8 @@ namespace проект
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }
 

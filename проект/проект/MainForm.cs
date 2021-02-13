@@ -26,35 +26,53 @@ namespace проект
             InitializeComponent();
 
             obj[0] = new objects();
-            obj[0].name = label3.Text;
+            obj[0].name = "Удочка Deukio";
             obj[0].picture = pictureBox1;
             obj[0].price = 859;
             obj[0].catecategory = "Удочки";
 
 
             obj[1] = new objects();
-            obj[1].name = label4.Text;
+            obj[1].name = "Удочка RAPALA";
             obj[1].picture = pictureBox2;
             obj[1].price = 1499;
             obj[1].catecategory = "Удочки";
 
             obj[2] = new objects();
-            obj[2].name = label5.Text;
+            obj[2].name = "Катушка Daiwa";
             obj[2].picture = pictureBox3;
             obj[2].price = 0;
             obj[2].catecategory = "Катушки";
 
             obj[3] = new objects();
-            obj[3].name = label6.Text;
+            obj[3].name = "Катушка Shimano";
             obj[3].picture = pictureBox4;
             obj[3].price = 0;
             obj[3].catecategory = "Катушки";
 
             obj[4] = new objects();
-            obj[4].name = label7.Text;
+            obj[4].name = "Катушка Stinger";
             obj[4].picture = pictureBox5;
             obj[4].price = 0;
             obj[4].catecategory = "Катушки";
+
+            for(int i = 0; i < 4; i++)
+            {
+                Label label30 = new Label();
+                label30.Location = new Point(10 + 160 * i, 223);
+                label30.Size = new Size(120, 55);
+                label30.Text = obj[i].name;
+                //label30.Font = new Font();
+                Controls.Add(label30);
+
+                PictureBox pb1 = new PictureBox();
+                pb1.Location = new Point(10 + 160 * i, 100);
+                pb1.Size = new Size(120, 120);
+                pb1.SizeMode = PictureBoxSizeMode.StretchImage;
+                pb1.Load("../../../Picture/" + obj[i].name + ".jpg");
+                Controls.Add(pb1);
+            }
+
         }
 
         private void label1_Click(object sender, EventArgs e)

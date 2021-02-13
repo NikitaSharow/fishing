@@ -123,24 +123,26 @@ namespace проект
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(13, 117);
+            this.pictureBox1.Location = new System.Drawing.Point(132, 100);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(112, 112);
+            this.pictureBox1.Size = new System.Drawing.Size(120, 120);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Tag = "";
+            this.pictureBox1.Visible = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label3.Location = new System.Drawing.Point(12, 231);
+            this.label3.Location = new System.Drawing.Point(132, 213);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 49);
+            this.label3.Size = new System.Drawing.Size(120, 55);
             this.label3.TabIndex = 4;
             this.label3.Text = "Удочка Deukio";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Visible = false;
             // 
             // textBox1
             // 
@@ -163,9 +165,9 @@ namespace проект
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label4.Location = new System.Drawing.Point(167, 229);
+            this.label4.Location = new System.Drawing.Point(170, 223);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 50);
+            this.label4.Size = new System.Drawing.Size(120, 55);
             this.label4.TabIndex = 8;
             this.label4.Text = "Удочка RAPALA";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -173,9 +175,9 @@ namespace проект
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(170, 117);
+            this.pictureBox2.Location = new System.Drawing.Point(170, 100);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(112, 112);
+            this.pictureBox2.Size = new System.Drawing.Size(120, 120);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
@@ -216,7 +218,7 @@ namespace проект
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(482, 117);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(112, 112);
+            this.pictureBox4.Size = new System.Drawing.Size(120, 120);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 13;
             this.pictureBox4.TabStop = false;
@@ -236,7 +238,7 @@ namespace проект
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(325, 117);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(112, 112);
+            this.pictureBox3.Size = new System.Drawing.Size(120, 120);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 11;
             this.pictureBox3.TabStop = false;
@@ -256,7 +258,7 @@ namespace проект
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(640, 117);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(112, 112);
+            this.pictureBox5.Size = new System.Drawing.Size(120, 120);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 15;
             this.pictureBox5.TabStop = false;
@@ -410,7 +412,7 @@ namespace проект
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1076, 642);
+            this.ClientSize = new System.Drawing.Size(1084, 641);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);

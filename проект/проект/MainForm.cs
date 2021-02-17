@@ -27,62 +27,84 @@ namespace проект
 
             obj[0] = new objects();
             obj[0].name = "Удочка Deukio";
-            obj[0].picture = pictureBox1;
             obj[0].price = 859;
             obj[0].catecategory = "Удочки";
 
 
             obj[1] = new objects();
             obj[1].name = "Удочка RAPALA";
-            obj[1].picture = pictureBox2;
             obj[1].price = 1499;
             obj[1].catecategory = "Удочки";
 
             obj[2] = new objects();
             obj[2].name = "Катушка Daiwa";
-            obj[2].picture = pictureBox3;
             obj[2].price = 0;
             obj[2].catecategory = "Катушки";
 
             obj[3] = new objects();
             obj[3].name = "Катушка Shimano";
-            obj[3].picture = pictureBox4;
             obj[3].price = 0;
             obj[3].catecategory = "Катушки";
 
             obj[4] = new objects();
             obj[4].name = "Катушка Stinger";
-            obj[4].picture = pictureBox5;
             obj[4].price = 0;
             obj[4].catecategory = "Катушки";
 
-            for(int i = 0; i < 4; i++)
+            obj[5] = new objects();
+            obj[5].name = "Леска Prologic";
+            obj[5].price = 0;
+            obj[5].catecategory = "Лески";
+
+            obj[6] = new objects();
+            obj[6].name = "Леска Sunline";
+            obj[6].price = 0;
+            obj[6].catecategory = "Лески";
+
+            obj[7] = new objects();
+            obj[7].name = "Леска Trabucco";
+            obj[7].price = 0;
+            obj[7].catecategory = "Лески";
+
+            int x = 10;
+            int y = 100;
+            for (int i = 0; i < 8; i++)
             {
                 Label label30 = new Label();
-                label30.Location = new Point(10 + 160 * i, 223);
+                label30.Location = new Point(x, y + 120);
                 label30.Size = new Size(120, 55);
                 label30.Text = obj[i].name;
                 //label30.Font = new Font();
                 Controls.Add(label30);
 
                 PictureBox pb1 = new PictureBox();
-                pb1.Location = new Point(10 + 160 * i, 100);
+                pb1.Location = new Point(x, y);
                 pb1.Size = new Size(120, 120);
                 pb1.SizeMode = PictureBoxSizeMode.StretchImage;
-                pb1.Load("../../../Picture/" + obj[i].name + ".jpg");
+                try
+                {
+                    pb1.Load("../../../Picture/" + obj[i].name + ".jpg");
+                }
+                catch (Exception) { }
                 Controls.Add(pb1);
+
+                x = x + 160;
+                if (x >= Width)
+                { y = y + 200; x = 10; }
             }
 
+            for (int i = 0; i < 8; i++)
+            {
+                obj[i].picture.Tag = obj[i].names;
+                obj[i].picture.Click += new EventHandler(open);
+            }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void open(object sender, EventArgs e)
         {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+            PictureBox pb1 = (PictureBox)sender;
+            GeneralForms form = new GeneralForms(pb1.Tag.ToString());
+            form.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -95,7 +117,7 @@ namespace проект
         /// </summary>
         private void SearchClick(object sender, EventArgs e)
         {
-            for(int i = 0; i <= 4; i++)
+            for(int i = 0; i < 8; i++)
             {
                 if (textBox1.Text != "")
                 {
@@ -122,24 +144,6 @@ namespace проект
             label6.Visible = pictureBox4.Visible;
             label7.Visible = pictureBox5.Visible;
         }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            GeneralForms form = new GeneralForms(obj[0].name);
-            form.Show();
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-           GeneralForms form = new GeneralForms(obj[1].name);
-           form.Show();
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             results form = new results();

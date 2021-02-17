@@ -86,7 +86,6 @@ namespace проект
             this.label1.TabIndex = 0;
             this.label1.Text = "Категория";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // comboBox1
             // 
@@ -104,7 +103,7 @@ namespace проект
             this.comboBox1.Location = new System.Drawing.Point(338, 30);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(275, 33);
+            this.comboBox1.Size = new System.Drawing.Size(275, 37);
             this.comboBox1.TabIndex = 1;
             this.comboBox1.Text = "Выберите категорию";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -118,12 +117,11 @@ namespace проект
             this.label2.TabIndex = 2;
             this.label2.Text = "Введите название";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(132, 100);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 100);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(120, 120);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -131,12 +129,11 @@ namespace проект
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Tag = "";
             this.pictureBox1.Visible = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label3.Location = new System.Drawing.Point(132, 213);
+            this.label3.Location = new System.Drawing.Point(6, 223);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 55);
             this.label3.TabIndex = 4;
@@ -149,7 +146,7 @@ namespace проект
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.8F);
             this.textBox1.Location = new System.Drawing.Point(12, 30);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(217, 33);
+            this.textBox1.Size = new System.Drawing.Size(217, 39);
             this.textBox1.TabIndex = 5;
             // 
             // button1
@@ -171,6 +168,7 @@ namespace проект
             this.label4.TabIndex = 8;
             this.label4.Text = "Удочка RAPALA";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Visible = false;
             // 
             // pictureBox2
             // 
@@ -181,7 +179,7 @@ namespace проект
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.Visible = false;
             // 
             // button2
             // 
@@ -212,16 +210,18 @@ namespace проект
             this.label6.TabIndex = 14;
             this.label6.Text = "Катушка Shimano";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label6.Visible = false;
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(482, 117);
+            this.pictureBox4.Location = new System.Drawing.Point(474, 100);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(120, 120);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 13;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Visible = false;
             // 
             // label5
             // 
@@ -232,16 +232,18 @@ namespace проект
             this.label5.TabIndex = 12;
             this.label5.Text = "Катушка Daiwa";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.Visible = false;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(325, 117);
+            this.pictureBox3.Location = new System.Drawing.Point(320, 100);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(120, 120);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 11;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Visible = false;
             // 
             // label7
             // 
@@ -252,16 +254,18 @@ namespace проект
             this.label7.TabIndex = 16;
             this.label7.Text = "Катушка Stinger";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label7.Visible = false;
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(640, 117);
+            this.pictureBox5.Location = new System.Drawing.Point(632, 100);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(120, 120);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 15;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Visible = false;
             // 
             // label10
             // 
@@ -272,6 +276,7 @@ namespace проект
             this.label10.TabIndex = 22;
             this.label10.Text = "Леска Trabucco";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label10.Visible = false;
             // 
             // pictureBox8
             // 
@@ -282,26 +287,29 @@ namespace проект
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 21;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Visible = false;
             // 
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label9.Location = new System.Drawing.Point(949, 228);
+            this.label9.Location = new System.Drawing.Point(949, 219);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(115, 50);
             this.label9.TabIndex = 20;
             this.label9.Text = "Леска Sunline";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label9.Visible = false;
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(952, 117);
+            this.pictureBox7.Location = new System.Drawing.Point(952, 108);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(112, 112);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 19;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Visible = false;
             // 
             // label8
             // 
@@ -312,16 +320,18 @@ namespace проект
             this.label8.TabIndex = 18;
             this.label8.Text = "Леска Prologic";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label8.Visible = false;
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(793, 117);
+            this.pictureBox6.Location = new System.Drawing.Point(793, 108);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(112, 112);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 17;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Visible = false;
             // 
             // label13
             // 
@@ -332,6 +342,7 @@ namespace проект
             this.label13.TabIndex = 28;
             this.label13.Text = "Удилище Волжанка Фортуна";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label13.Visible = false;
             // 
             // pictureBox11
             // 
@@ -342,6 +353,7 @@ namespace проект
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 27;
             this.pictureBox11.TabStop = false;
+            this.pictureBox11.Visible = false;
             // 
             // label12
             // 
@@ -352,6 +364,7 @@ namespace проект
             this.label12.TabIndex = 26;
             this.label12.Text = "Удилище Волжанка Классик";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label12.Visible = false;
             // 
             // pictureBox10
             // 
@@ -362,6 +375,7 @@ namespace проект
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 25;
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.Visible = false;
             // 
             // label11
             // 
@@ -372,6 +386,7 @@ namespace проект
             this.label11.TabIndex = 24;
             this.label11.Text = "Удилище Maximus Sorcerer";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label11.Visible = false;
             // 
             // pictureBox9
             // 
@@ -382,6 +397,7 @@ namespace проект
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 23;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Visible = false;
             // 
             // label14
             // 
@@ -404,15 +420,15 @@ namespace проект
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(88, 30);
+            this.numericUpDown1.Size = new System.Drawing.Size(88, 35);
             this.numericUpDown1.TabIndex = 31;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1084, 641);
+            this.ClientSize = new System.Drawing.Size(1112, 641);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);

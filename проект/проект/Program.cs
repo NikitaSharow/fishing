@@ -8,6 +8,8 @@ namespace проект
 {
     static class Program
     {
+        public static string ChoosedPlace = "";
+
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>

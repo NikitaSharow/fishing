@@ -14,57 +14,38 @@ namespace проект
     {
         public PictureBox picture;
         public string name;
+        public Label label;
         public int price;
-        public string catecategory;
+        public string category;
 
+        public objects (string name1, string category1, int price1)
+        {
+            picture = new PictureBox();
+            label = new Label();
+            name = name1;
+            price = price1;
+            category = category1;
+        }
     }
+
     public partial class MainForm : Form
     {
         public objects[] obj = new objects[11];
+        //List<objects> obj1 = new List<objects>();
+
         public MainForm()
         {
             InitializeComponent();
 
-            obj[0] = new objects();
-            obj[0].name = "Удочка Deukio";
-            obj[0].price = 859;
-            obj[0].catecategory = "Удочки";
-
-
-            obj[1] = new objects();
-            obj[1].name = "Удочка RAPALA";
-            obj[1].price = 1499;
-            obj[1].catecategory = "Удочки";
-
-            obj[2] = new objects();
-            obj[2].name = "Катушка Daiwa";
-            obj[2].price = 0;
-            obj[2].catecategory = "Катушки";
-
-            obj[3] = new objects();
-            obj[3].name = "Катушка Shimano";
-            obj[3].price = 0;
-            obj[3].catecategory = "Катушки";
-
-            obj[4] = new objects();
-            obj[4].name = "Катушка Stinger";
-            obj[4].price = 0;
-            obj[4].catecategory = "Катушки";
-
-            obj[5] = new objects();
-            obj[5].name = "Леска Prologic";
-            obj[5].price = 0;
-            obj[5].catecategory = "Лески";
-
-            obj[6] = new objects();
-            obj[6].name = "Леска Sunline";
-            obj[6].price = 0;
-            obj[6].catecategory = "Лески";
-
-            obj[7] = new objects();
-            obj[7].name = "Леска Trabucco";
-            obj[7].price = 0;
-            obj[7].catecategory = "Лески";
+            //obj1.Add(new objects("Удочка Deukio", "Удочки", 859));
+            obj[0] = new objects("Удочка Deukio"  , "Удочки" , 859 );
+            obj[1] = new objects("Удочка RAPALA"  , "Удочки" , 1499);
+            obj[2] = new objects("Катушка Daiwa"  , "Катушка", 0   );
+            obj[3] = new objects("Катушка Shimano", "Катушка", 0   );
+            obj[4] = new objects("Катушка Stinger", "Катушка", 0   );
+            obj[5] = new objects("Леска Prologic" , "Леска"  , 0   );
+            obj[6] = new objects("Леска Sunline"  , "Леска"  , 0   );
+            obj[7] = new objects("Леска Trabucco" , "Леска",   0   );
 
             int x = 10;
             int y = 100;
@@ -76,6 +57,7 @@ namespace проект
                 label30.Text = obj[i].name;
                 //label30.Font = new Font();
                 Controls.Add(label30);
+                obj[i].label = label30;
 
                 PictureBox pb1 = new PictureBox();
                 pb1.Location = new Point(x, y);
@@ -87,6 +69,7 @@ namespace проект
                 }
                 catch (Exception) { }
                 Controls.Add(pb1);
+                obj[i].picture = pb1;
 
                 x = x + 160;
                 if (x >= Width)
@@ -95,7 +78,7 @@ namespace проект
 
             for (int i = 0; i < 8; i++)
             {
-                obj[i].picture.Tag = obj[i].names;
+                obj[i].picture.Tag = obj[i].name;
                 obj[i].picture.Click += new EventHandler(open);
             }
         }
@@ -117,32 +100,33 @@ namespace проект
         /// </summary>
         private void SearchClick(object sender, EventArgs e)
         {
-            for(int i = 0; i < 8; i++)
+            int x = 10;
+            int y = 100;
+            for (int i = 0; i < 8; i++)
             {
-                if (textBox1.Text != "")
-                {
+                obj[i].picture.Visible = true;
+
+                if (textBox1.Text != "" &&
+                    !obj[i].name.Contains(textBox1.Text))
                     obj[i].picture.Visible = false;
 
-                    if (obj[i].name.Contains(textBox1.Text))
-                        obj[i].picture.Visible = true;
-                }
+                if (comboBox1.Text != "Всё" && 
+                    comboBox1.Text != "Выберите категорию" && 
+                    comboBox1.Text != obj[i].category)
+                    obj[i].picture.Visible = false;
 
-                else
+                if(obj[i].picture.Visible)
                 {
-                    obj[i].picture.Visible = true;
-
-                    if(comboBox1.Text != "Всё" && comboBox1.Text != obj[i].catecategory)
-                        obj[i].picture.Visible = false;
+                    obj[i].picture.Location = new Point(x, y);
+                    obj[i].label.Location = new Point(x, y + 120);
+                    x = x + 160;
+                    if (x >= Width)
+                    { y = y + 200; x = 10; }
                 }
                 
-
+                obj[i].label.Visible = obj[i].picture.Visible;
             }
 
-            label3.Visible = pictureBox1.Visible;
-            label4.Visible = pictureBox2.Visible;
-            label5.Visible = pictureBox3.Visible;
-            label6.Visible = pictureBox4.Visible;
-            label7.Visible = pictureBox5.Visible;
         }
         private void button2_Click(object sender, EventArgs e)
         {

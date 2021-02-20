@@ -15,6 +15,8 @@ namespace проект
         public results()
         {
             InitializeComponent();
+
+            label6.Text = "Место ловли: " + Program.ChoosedPlace;
         }
     }
 }

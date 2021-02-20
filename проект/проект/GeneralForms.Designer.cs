@@ -33,15 +33,16 @@ namespace проект
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.8F);
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(659, 286);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(612, 482);
+            this.label1.Size = new System.Drawing.Size(147, 88);
             this.label1.TabIndex = 0;
             this.label1.Text = "Описание";
             // 
@@ -74,20 +75,34 @@ namespace проект
             this.label2.Text = "Цена:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // AnyForms
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.8F);
+            this.textBox1.Location = new System.Drawing.Point(13, 9);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(601, 493);
+            this.textBox1.TabIndex = 5;
+            // 
+            // GeneralForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 503);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
-            this.Name = "AnyForms";
+            this.Name = "GeneralForms";
             this.Text = "fishingForms";
             this.Load += new System.EventHandler(this.fishingForms_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -97,5 +112,6 @@ namespace проект
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

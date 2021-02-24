@@ -40,12 +40,12 @@ namespace проект
             //obj1.Add(new objects("Удочка Deukio", "Удочки", 859));
             obj[0] = new objects("Удочка Deukio"  , "Удочки" , 859 );
             obj[1] = new objects("Удочка RAPALA"  , "Удочки" , 1499);
-            obj[2] = new objects("Катушка Daiwa"  , "Катушка", 0   );
-            obj[3] = new objects("Катушка Shimano", "Катушка", 0   );
-            obj[4] = new objects("Катушка Stinger", "Катушка", 0   );
-            obj[5] = new objects("Леска Prologic" , "Леска"  , 0   );
-            obj[6] = new objects("Леска Sunline"  , "Леска"  , 0   );
-            obj[7] = new objects("Леска Trabucco" , "Леска",   0   );
+            obj[2] = new objects("Катушка Daiwa"  , "Катушки", 2772);
+            obj[3] = new objects("Катушка Shimano", "Катушки", 4200);
+            obj[4] = new objects("Катушка Stinger", "Катушки", 3300);
+            obj[5] = new objects("Леска Prologic" , "Лески"  , 349 );
+            obj[6] = new objects("Леска Sunline"  , "Лески"  , 344 );
+            obj[7] = new objects("Леска Trabucco" , "Лески"  , 300 );
 
             int x = 10;
             int y = 100;
@@ -79,6 +79,7 @@ namespace проект
             for (int i = 0; i < 8; i++)
             {
                 obj[i].picture.Tag = obj[i].name;
+                obj[i].picture.AccessibleDescription = obj[i].price.ToString();
                 obj[i].picture.Click += new EventHandler(open);
             }
         }
@@ -86,7 +87,7 @@ namespace проект
         private void open(object sender, EventArgs e)
         {
             PictureBox pb1 = (PictureBox)sender;
-            GeneralForms form = new GeneralForms(pb1.Tag.ToString());
+            GeneralForms form = new GeneralForms(pb1.Tag.ToString(), pb1.AccessibleDescription);
             form.Show();
         }
 

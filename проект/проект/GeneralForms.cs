@@ -16,7 +16,7 @@ namespace проект
         /// Форма для удочек
         /// </summary>
         /// <param name="Name">Модель удочки</param>
-        public GeneralForms(string Name)
+        public GeneralForms(string Name, string Price = "")
         {
             InitializeComponent();
             try
@@ -27,15 +27,17 @@ namespace проект
             }
             catch { label1.Text = "Ошибка"; }
                 
+            if (Price != "")
+                label2.Text = "Цена: " + Price + " руб.";
 
-            if (Name == "Удочка Deukio")
+            /*if (Name == "Удочка Deukio")
             {
                 label2.Text = "Цена: 859 руб.";
             }
             if (Name == "Удочка RAPALA")
             {
                 label2.Text = "Цена: 1499 руб.";
-            }
+            }*/
             if (Name == "Волга" || Name == "Енисей" || Name == "Обь")
             {
                 label2.Text = "";

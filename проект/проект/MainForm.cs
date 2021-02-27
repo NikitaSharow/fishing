@@ -48,7 +48,7 @@ namespace проект
             obj[7]  = new objects("Леска Trabucco" , "Лески"  , 300 );
             obj[8]  = new objects("Удилище Maximus Sorcerer"  , "Удилища", 2567);
             obj[9]  = new objects("Удилище Волжанка Классик"  , "Удилища", 1130);
-            obj[10] = new objects("Удилище Волжанка Фортуна"  , "Удилища", 2437);
+            obj[10] = new objects("Удилище Волжанка Фортуна"  , "Удилища", 2437 );
 
             int x = 10;
             int y = 100;

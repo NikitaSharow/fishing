@@ -151,9 +151,9 @@ namespace проект
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(716, 27);
+            this.button1.Location = new System.Drawing.Point(752, 30);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(230, 37);
+            this.button1.Size = new System.Drawing.Size(230, 39);
             this.button1.TabIndex = 6;
             this.button1.Text = "Выбрать место ловли";
             this.button1.UseVisualStyleBackColor = true;
@@ -183,9 +183,9 @@ namespace проект
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(952, 28);
+            this.button2.Location = new System.Drawing.Point(988, 30);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 37);
+            this.button2.Size = new System.Drawing.Size(112, 39);
             this.button2.TabIndex = 9;
             this.button2.Text = "Итог";
             this.button2.UseVisualStyleBackColor = true;
@@ -193,9 +193,9 @@ namespace проект
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(234, 28);
+            this.button3.Location = new System.Drawing.Point(235, 30);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(95, 35);
+            this.button3.Size = new System.Drawing.Size(95, 39);
             this.button3.TabIndex = 10;
             this.button3.Text = "Поиск";
             this.button3.UseVisualStyleBackColor = true;
@@ -402,24 +402,24 @@ namespace проект
             // 
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.2F);
             this.label14.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label14.Location = new System.Drawing.Point(622, 1);
+            this.label14.Location = new System.Drawing.Point(640, 3);
             this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(88, 24);
+            this.label14.Size = new System.Drawing.Size(88, 27);
             this.label14.TabIndex = 30;
             this.label14.Text = "Цена";
             this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(622, 32);
+            this.numericUpDown1.Location = new System.Drawing.Point(622, 33);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(88, 35);
+            this.numericUpDown1.Size = new System.Drawing.Size(124, 35);
             this.numericUpDown1.TabIndex = 31;
             // 
             // MainForm

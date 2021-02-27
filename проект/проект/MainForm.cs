@@ -30,60 +30,55 @@ namespace проект
 
     public partial class MainForm : Form
     {
-        public objects[] obj = new objects[11];
-        //List<objects> obj1 = new List<objects>();
+        //public objects[] obj = new objects[11];
+        List<objects> objList = new List<objects>();
 
         public MainForm()
         {
             InitializeComponent();
 
-            //obj1.Add(new objects("Удочка Deukio", "Удочки", 859));
-            obj[0]  = new objects("Удочка Deukio"  , "Удочки" , 859 );
-            obj[1]  = new objects("Удочка RAPALA"  , "Удочки" , 1499);
-            obj[2]  = new objects("Катушка Daiwa"  , "Катушки", 2772);
-            obj[3]  = new objects("Катушка Shimano", "Катушки", 4200);
-            obj[4]  = new objects("Катушка Stinger", "Катушки", 3300);
-            obj[5]  = new objects("Леска Prologic" , "Лески"  , 349 );
-            obj[6]  = new objects("Леска Sunline"  , "Лески"  , 344 );
-            obj[7]  = new objects("Леска Trabucco" , "Лески"  , 300 );
-            obj[8]  = new objects("Удилище Maximus Sorcerer"  , "Удилища", 2567);
-            obj[9]  = new objects("Удилище Волжанка Классик"  , "Удилища", 1130);
-            obj[10] = new objects("Удилище Волжанка Фортуна"  , "Удилища", 2437 );
+            objList.Add(new objects("Удочка Deukio"  , "Удочки" , 859));
+            objList.Add(new objects("Удочка RAPALA"  , "Удочки" , 1499));
+            objList.Add(new objects("Катушка Daiwa"  , "Катушки", 2772));
+            objList.Add(new objects("Катушка Shimano", "Катушки", 4200));
+            objList.Add(new objects("Катушка Stinger", "Катушки", 3300));
+            objList.Add(new objects("Леска Prologic" , "Лески"  , 349 ));
+            objList.Add(new objects("Леска Sunline"  , "Лески"  , 344 ));
+            objList.Add(new objects("Леска Trabucco" , "Лески"  , 300 ));
+            objList.Add(new objects("Удилище Maximus Sorcerer"  , "Удилища", 2567));
+            objList.Add(new objects("Удилище Волжанка Классик"  , "Удилища", 1130));
+            objList.Add(new objects("Удилище Волжанка Фортуна"  , "Удилища", 2437));
 
             int x = 10;
             int y = 100;
-            for (int i = 0; i < 11; i++)
+            for (int i = 0; i < objList.Count; i++)
             {
-                Label label30 = new Label();
-                label30.Location = new Point(x, y + 120);
-                label30.Size = new Size(120, 75);
-                label30.Text = obj[i].name;
+                objList[i].label.Location = new Point(x, y + 120);
+                objList[i].label.Size = new Size(120, 75);
+                objList[i].label.Text = objList[i].name;
                 //label30.Font = new Font();
-                Controls.Add(label30);
-                obj[i].label = label30;
+                Controls.Add(objList[i].label);
 
-                PictureBox pb1 = new PictureBox();
-                pb1.Location = new Point(x, y);
-                pb1.Size = new Size(120, 120);
-                pb1.SizeMode = PictureBoxSizeMode.StretchImage;
+                objList[i].picture.Location = new Point(x, y);
+                objList[i].picture.Size = new Size(120, 120);
+                objList[i].picture.SizeMode = PictureBoxSizeMode.StretchImage;
                 try
                 {
-                    pb1.Load("../../../Picture/" + obj[i].name + ".jpg");
+                    objList[i].picture.Load("../../../Picture/" + objList[i].name + ".jpg");
                 }
                 catch (Exception) { }
-                Controls.Add(pb1);
-                obj[i].picture = pb1;
+                Controls.Add(objList[i].picture);
 
                 x = x + 160;
                 if (x >= Width)
                 { y = y + 200; x = 10; }
             }
 
-            for (int i = 0; i < 11; i++)
+            for (int i = 0; i < objList.Count; i++)
             {
-                obj[i].picture.Tag = obj[i].name;
-                obj[i].picture.AccessibleDescription = obj[i].price.ToString();
-                obj[i].picture.Click += new EventHandler(open);
+                objList[i].picture.Tag = objList[i].name;
+                objList[i].picture.AccessibleDescription = objList[i].price.ToString();
+                objList[i].picture.Click += new EventHandler(open);
             }
         }
 
@@ -106,29 +101,33 @@ namespace проект
         {
             int x = 10;
             int y = 100;
-            for (int i = 0; i < 11; i++)
+            for (int i = 0; i < objList.Count; i++)
             {
-                obj[i].picture.Visible = true;
+                objList[i].picture.Visible = true;
 
                 if (textBox1.Text != "" &&
-                    !obj[i].name.Contains(textBox1.Text))
-                    obj[i].picture.Visible = false;
+                    !objList[i].name.Contains(textBox1.Text))
+                    objList[i].picture.Visible = false;
 
                 if (comboBox1.Text != "Всё" && 
                     comboBox1.Text != "Выберите категорию" && 
-                    comboBox1.Text != obj[i].category)
-                    obj[i].picture.Visible = false;
+                    comboBox1.Text != objList[i].category)
+                    objList[i].picture.Visible = false;
 
-                if(obj[i].picture.Visible)
+                if (numericUpDown1.Value != 0 &&
+                    numericUpDown1.Value <= objList[i].price)
+                    objList[i].picture.Visible = false;
+
+                if (objList[i].picture.Visible)
                 {
-                    obj[i].picture.Location = new Point(x, y);
-                    obj[i].label.Location = new Point(x, y + 120);
+                    objList[i].picture.Location = new Point(x, y);
+                    objList[i].label.Location = new Point(x, y + 120);
                     x = x + 160;
                     if (x >= Width)
                     { y = y + 200; x = 10; }
                 }
-                
-                obj[i].label.Visible = obj[i].picture.Visible;
+
+                objList[i].label.Visible = objList[i].picture.Visible;
             }
 
         }

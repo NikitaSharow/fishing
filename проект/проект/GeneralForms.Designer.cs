@@ -40,17 +40,17 @@ namespace проект
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.8F);
-            this.label1.Location = new System.Drawing.Point(659, 286);
+            this.label1.Location = new System.Drawing.Point(723, 256);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 88);
+            this.label1.Size = new System.Drawing.Size(241, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "Описание";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(630, 454);
+            this.button1.Location = new System.Drawing.Point(723, 524);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 37);
+            this.button1.Size = new System.Drawing.Size(241, 44);
             this.button1.TabIndex = 1;
             this.button1.Text = "Добавить в корзину";
             this.button1.UseVisualStyleBackColor = true;
@@ -58,9 +58,9 @@ namespace проект
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(630, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(723, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(190, 193);
+            this.pictureBox1.Size = new System.Drawing.Size(241, 241);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -68,9 +68,9 @@ namespace проект
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.8F);
-            this.label2.Location = new System.Drawing.Point(630, 419);
+            this.label2.Location = new System.Drawing.Point(724, 489);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(190, 32);
+            this.label2.Size = new System.Drawing.Size(240, 32);
             this.label2.TabIndex = 3;
             this.label2.Text = "Цена:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -79,19 +79,19 @@ namespace проект
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.8F);
-            this.textBox1.Location = new System.Drawing.Point(13, 9);
+            this.textBox1.Location = new System.Drawing.Point(12, 12);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(601, 493);
+            this.textBox1.Size = new System.Drawing.Size(705, 556);
             this.textBox1.TabIndex = 5;
             // 
             // GeneralForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 503);
+            this.ClientSize = new System.Drawing.Size(976, 580);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);

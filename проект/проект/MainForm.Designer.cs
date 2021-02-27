@@ -357,10 +357,9 @@ namespace проект
             // 
             // label12
             // 
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.label12.Location = new System.Drawing.Point(325, 397);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(115, 66);
+            this.label12.Size = new System.Drawing.Size(120, 72);
             this.label12.TabIndex = 26;
             this.label12.Text = "Удилище Волжанка Классик";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

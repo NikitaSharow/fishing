@@ -9,6 +9,9 @@ namespace проект
     static class Program
     {
         public static string ChoosedPlace = "";
+        public static string ChoosedLb1 = "";
+        public static string ChoosedLb2 = "";
+        public static string ChoosedLb3 = "";
 
         /// <summary>
         /// Главная точка входа для приложения.

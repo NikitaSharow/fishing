@@ -30,14 +30,13 @@ namespace проект
 
     public partial class MainForm : Form
     {
-        //public objects[] obj = new objects[11];
-        List<objects> objList = new List<objects>();
+        public static List<objects> objList = new List<objects>();
 
         public MainForm()
         {
             InitializeComponent();
 
-            objList.Add(new objects("Удочка Deukio"  , "Удочки" , 859));
+            objList.Add(new objects("Удочка Deukio"  , "Удочки" , 859 ));
             objList.Add(new objects("Удочка RAPALA"  , "Удочки" , 1499));
             objList.Add(new objects("Катушка Daiwa"  , "Катушки", 2772));
             objList.Add(new objects("Катушка Shimano", "Катушки", 4200));

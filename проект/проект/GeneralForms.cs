@@ -13,32 +13,34 @@ namespace проект
     public partial class GeneralForms : Form
     {
         /// <summary>
+        /// Модель удочки
+        /// </summary>
+        string product = "";
+
+        /// <summary>
         /// Форма для удочек
         /// </summary>
-        /// <param name="Name">Модель удочки</param>
-        public GeneralForms(string Name, string Price = "")
+        /// <param name="model">Модель удочки</param>
+        public GeneralForms(string model, string Price = "")
         {
+            product = model;
             InitializeComponent();
             try
             {
-                pictureBox1.Load("../../../Picture/" + Name + ".jpg");
-                label1.Text = File.ReadAllText("../../../Files/" + Name + ".txt");
-                textBox1.Text = File.ReadAllText("../../../Files/" + Name + ".txt");
+                pictureBox1.Load("../../../Picture/" + model + ".jpg");
+                label1.Text = File.ReadAllText("../../../Files/" + model + ".txt");
+                textBox1.Text = File.ReadAllText("../../../Files/" + model + ".txt");
             }
             catch { label1.Text = "Ошибка"; }
                 
-            if (Price != "")
-                label2.Text = "Цена: " + Price + " руб.";
+            for (int i = 0; i < MainForm.objList.Count; i++)
+                if(model == MainForm.objList[i].name)
+                {
+                    label2.Text = "Цена: " + MainForm.objList[i].price + " руб.";
 
-            /*if (Name == "Удочка Deukio")
-            {
-                label2.Text = "Цена: 859 руб.";
-            }
-            if (Name == "Удочка RAPALA")
-            {
-                label2.Text = "Цена: 1499 руб.";
-            }*/
-            if (Name == "Волга" || Name == "Енисей" || Name == "Обь")
+                }
+
+            if (model == "Волга" || model == "Енисей" || model == "Обь")
             {
                 label2.Text = "";
                 button1.Text = "Выбрать";
@@ -48,7 +50,18 @@ namespace проект
 
         private void button1_Click(object sender, EventArgs e)
         {
+            for (int i = 0; i < MainForm.objList.Count; i++)
+                if (product == MainForm.objList[i].name)
+                {
+                    if (MainForm.objList[i].category == "Удилища")
+                        Program.ChoosedLb1 = MainForm.objList[i].name;
+                    if (MainForm.objList[i].category == "Катушки")
+                        Program.ChoosedLb2 = MainForm.objList[i].name;
+                    if (MainForm.objList[i].category == "Лески")
+                        Program.ChoosedLb3 = MainForm.objList[i].name;
 
+                }
+            label3.Visible = true;        
         }
 
         private void fishingForms_Load(object sender, EventArgs e)

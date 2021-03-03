@@ -15,8 +15,12 @@ namespace проект
         public results()
         {
             InitializeComponent();
-
+            int price = 0;
+            label1.Text = "Удилище: " + Program.ChoosedLb1;
+            label2.Text = "Катушка: " + Program.ChoosedLb2;
+            label3.Text = "Леска: "   + Program.ChoosedLb3;
             label6.Text = "Место ловли: " + Program.ChoosedPlace;
+            label10.Text = "Сколько все это будет стоить: " + price;
         }
     }
 }

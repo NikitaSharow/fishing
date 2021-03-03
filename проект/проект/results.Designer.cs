@@ -38,6 +38,7 @@ namespace проект
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -63,22 +64,22 @@ namespace проект
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.label3.Location = new System.Drawing.Point(19, 220);
+            this.label3.Location = new System.Drawing.Point(19, 173);
             this.label3.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(640, 47);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Крючок:";
+            this.label3.Text = "Леска:";
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.label4.Location = new System.Drawing.Point(19, 173);
+            this.label4.Location = new System.Drawing.Point(19, 220);
             this.label4.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(640, 47);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Леска:";
+            this.label4.Text = "Крючок:";
             // 
             // label5
             // 
@@ -113,7 +114,7 @@ namespace проект
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.label8.Location = new System.Drawing.Point(19, 361);
+            this.label8.Location = new System.Drawing.Point(19, 403);
             this.label8.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(640, 47);
@@ -124,12 +125,22 @@ namespace проект
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.label9.Location = new System.Drawing.Point(19, 408);
+            this.label9.Location = new System.Drawing.Point(19, 450);
             this.label9.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(640, 47);
             this.label9.TabIndex = 8;
-            this.label9.Text = "Текст";
+            this.label9.Text = "Ничего";
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.label10.Location = new System.Drawing.Point(19, 356);
+            this.label10.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(640, 47);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Сколько все это будет стоить:";
             // 
             // results
             // 
@@ -137,6 +148,7 @@ namespace проект
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(678, 693);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -165,5 +177,6 @@ namespace проект
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }

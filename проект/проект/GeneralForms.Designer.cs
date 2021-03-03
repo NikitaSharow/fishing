@@ -34,6 +34,7 @@ namespace проект
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,12 +49,13 @@ namespace проект
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
             this.button1.Location = new System.Drawing.Point(723, 524);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(241, 44);
             this.button1.TabIndex = 1;
             this.button1.Text = "Добавить в корзину";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
@@ -87,11 +89,24 @@ namespace проект
             this.textBox1.Size = new System.Drawing.Size(705, 556);
             this.textBox1.TabIndex = 5;
             // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.8F);
+            this.label3.ForeColor = System.Drawing.Color.Brown;
+            this.label3.Location = new System.Drawing.Point(723, 449);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(241, 40);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Выбрано";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label3.Visible = false;
+            // 
             // GeneralForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(976, 580);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
@@ -113,5 +128,6 @@ namespace проект
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3;
     }
 }

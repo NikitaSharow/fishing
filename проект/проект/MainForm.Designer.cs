@@ -61,6 +61,7 @@ namespace проект
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -73,6 +74,7 @@ namespace проект
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -151,9 +153,10 @@ namespace проект
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.button1.Location = new System.Drawing.Point(752, 30);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(230, 39);
+            this.button1.Size = new System.Drawing.Size(219, 39);
             this.button1.TabIndex = 6;
             this.button1.Text = "Выбрать место ловли";
             this.button1.UseVisualStyleBackColor = true;
@@ -183,7 +186,7 @@ namespace проект
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(988, 30);
+            this.button2.Location = new System.Drawing.Point(977, 30);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(112, 39);
             this.button2.TabIndex = 9;
@@ -422,12 +425,24 @@ namespace проект
             this.numericUpDown1.Size = new System.Drawing.Size(124, 35);
             this.numericUpDown1.TabIndex = 31;
             // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(1095, 29);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(39, 39);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 32;
+            this.pictureBox12.TabStop = false;
+            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1112, 641);
+            this.ClientSize = new System.Drawing.Size(1142, 641);
+            this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
@@ -477,6 +492,7 @@ namespace проект
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -515,6 +531,7 @@ namespace проект
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.PictureBox pictureBox12;
     }
 }
 

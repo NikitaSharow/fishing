@@ -13,6 +13,8 @@ namespace проект
         public static string ChoosedLb2 = "";
         public static string ChoosedLb3 = "";
 
+
+        public static bool Mode;
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>

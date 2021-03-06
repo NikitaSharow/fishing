@@ -32,6 +32,8 @@ namespace проект
     {
         public static List<objects> objList = new List<objects>();
 
+        public static List<objects> korzina = new List<objects>();
+
         public MainForm()
         {
             InitializeComponent();
@@ -48,7 +50,7 @@ namespace проект
             objList.Add(new objects("Удилище Волжанка Классик"  , "Удилища", 1130));
             objList.Add(new objects("Удилище Волжанка Фортуна"  , "Удилища", 2437));
 
-            int x = 10;
+            int x = 30;
             int y = 100;
             for (int i = 0; i < objList.Count; i++)
             {
@@ -70,7 +72,7 @@ namespace проект
 
                 x = x + 160;
                 if (x >= Width)
-                { y = y + 200; x = 10; }
+                { y = y + 200; x = 30; }
             }
 
             for (int i = 0; i < objList.Count; i++)
@@ -132,8 +134,17 @@ namespace проект
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            results form = new results();
-            form.Show();
+            if (Program.Mode)
+            {
+                GeneralForms form = new GeneralForms("Корзина");
+                form.Show();
+            }
+                
+            else
+                {results form = new results(); form.Show(); }
+                
+            
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -144,6 +155,12 @@ namespace проект
         private void MainForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            Settings form = new Settings();
+            form.Show();
         }
     }
 }

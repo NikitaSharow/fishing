@@ -29,7 +29,11 @@ namespace проект
             {
                 pictureBox1.Load("../../../Picture/" + model + ".jpg");
                 label1.Text = File.ReadAllText("../../../Files/" + model + ".txt");
-                textBox1.Text = File.ReadAllText("../../../Files/" + model + ".txt");
+                if (model == "Корзина")
+                    for (int i = 0; i < MainForm.korzina.Count; i++)
+                        textBox1.Text = MainForm.korzina[i].name + ",";
+                else
+                    textBox1.Text = File.ReadAllText("../../../Files/" + model + ".txt");
             }
             catch { label1.Text = "Ошибка"; }
                 
@@ -37,13 +41,14 @@ namespace проект
                 if(model == MainForm.objList[i].name)
                 {
                     label2.Text = "Цена: " + MainForm.objList[i].price + " руб.";
-
                 }
 
-            if (model == "Волга" || model == "Енисей" || model == "Обь")
+            if (model == "Волга" || model == "Енисей" || model == "Обь" || model == "Корзина")
             {
                 label2.Text = "";
                 button1.Text = "Выбрать";
+                if (model == "Корзина")
+                { button1.Visible = false; pictureBox1.Visible = false; label1.Visible = false; }
             }
 
         }
@@ -53,12 +58,18 @@ namespace проект
             for (int i = 0; i < MainForm.objList.Count; i++)
                 if (product == MainForm.objList[i].name)
                 {
-                    if (MainForm.objList[i].category == "Удилища")
-                        Program.ChoosedLb1 = MainForm.objList[i].name;
-                    if (MainForm.objList[i].category == "Катушки")
-                        Program.ChoosedLb2 = MainForm.objList[i].name;
-                    if (MainForm.objList[i].category == "Лески")
-                        Program.ChoosedLb3 = MainForm.objList[i].name;
+                    if (Program.Mode)
+                        MainForm.korzina.Add(new objects(MainForm.objList[i].name, "", 0));
+                    else
+                    {
+                        if (MainForm.objList[i].category == "Удилища")
+                            Program.ChoosedLb1 = MainForm.objList[i].name;
+                        if (MainForm.objList[i].category == "Катушки")
+                            Program.ChoosedLb2 = MainForm.objList[i].name;
+                        if (MainForm.objList[i].category == "Лески")
+                            Program.ChoosedLb3 = MainForm.objList[i].name;
+                    }
+
 
                 }
             label3.Visible = true;        

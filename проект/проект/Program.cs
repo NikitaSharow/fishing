@@ -13,8 +13,10 @@ namespace проект
         public static string ChoosedLb2 = "";
         public static string ChoosedLb3 = "";
 
-
-        public static bool Mode;
+        /// <summary>
+        /// Режим корзины (true) или подбора деталей (false)
+        /// </summary>
+        public static bool CartMode = false;
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>

@@ -1,7 +1,7 @@
 ﻿
 namespace проект
 {
-    partial class results
+    partial class Results
     {
         /// <summary>
         /// Required designer variable.

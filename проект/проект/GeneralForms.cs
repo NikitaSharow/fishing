@@ -15,7 +15,7 @@ namespace проект
         /// <summary>
         /// Модель удочки
         /// </summary>
-        string product = "";
+        objects product;
 
         /// <summary>
         /// Форма для удочек
@@ -23,56 +23,64 @@ namespace проект
         /// <param name="model">Модель удочки</param>
         public GeneralForms(string model, string Price = "")
         {
-            product = model;
             InitializeComponent();
+
+            //Что за удочка прилетела на форму
+            foreach (objects choosenProduct in MainForm.objList)
+            {
+                if (model == choosenProduct.name)
+                {
+                    product = choosenProduct;
+                    label2.Text = "Цена: " + product.price + " руб.";
+                    pictureBox1.Image = product.picture.Image;
+                }
+            }
+
             try
             {
-                pictureBox1.Load("../../../Picture/" + model + ".jpg");
                 label1.Text = File.ReadAllText("../../../Files/" + model + ".txt");
-                if (model == "Корзина")
-                    for (int i = 0; i < MainForm.korzina.Count; i++)
-                        textBox1.Text = MainForm.korzina[i].name + ",";
-                else
-                    textBox1.Text = File.ReadAllText("../../../Files/" + model + ".txt");
+
+                textBox1.Text = File.ReadAllText("../../../Files/" + model + ".txt");
             }
             catch { label1.Text = "Ошибка"; }
                 
-            for (int i = 0; i < MainForm.objList.Count; i++)
-                if(model == MainForm.objList[i].name)
-                {
-                    label2.Text = "Цена: " + MainForm.objList[i].price + " руб.";
-                }
 
             if (model == "Волга" || model == "Енисей" || model == "Обь" || model == "Корзина")
             {
                 label2.Text = "";
                 button1.Text = "Выбрать";
                 if (model == "Корзина")
-                { button1.Visible = false; pictureBox1.Visible = false; label1.Visible = false; }
+                { button1.Visible = false; pictureBox1.Visible = false; 
+                    label1.Visible = false; textBox1.Visible = false;
+                }
             }
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < MainForm.objList.Count; i++)
-                if (product == MainForm.objList[i].name)
-                {
-                    if (Program.Mode)
-                        MainForm.korzina.Add(new objects(MainForm.objList[i].name, "", 0));
-                    else
-                    {
-                        if (MainForm.objList[i].category == "Удилища")
-                            Program.ChoosedLb1 = MainForm.objList[i].name;
-                        if (MainForm.objList[i].category == "Катушки")
-                            Program.ChoosedLb2 = MainForm.objList[i].name;
-                        if (MainForm.objList[i].category == "Лески")
-                            Program.ChoosedLb3 = MainForm.objList[i].name;
-                    }
+            if (Program.CartMode)
+            {
+                if (MainForm.korzina.ContainsKey(product))
+                    MainForm.korzina[product]++;
+                else
+                    MainForm.korzina.Add(product, 1);
+            }
 
+            else
+            {
+                if (product.category == "Удилища")
+                    Program.ChoosedLb1 = product.name;
+                if (product.category == "Катушки")
+                    Program.ChoosedLb2 = product.name;
+                if (product.category == "Лески")
+                    Program.ChoosedLb3 = product.name;
+            }
 
-                }
-            label3.Visible = true;        
+            if (Program.CartMode)
+            {label3.Text = "Добавлено"; label3.Visible = true; }
+            else
+                label3.Visible = true;        
         }
 
         private void fishingForms_Load(object sender, EventArgs e)

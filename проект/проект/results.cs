@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace проект
 {
-    public partial class results : Form
+    public partial class Results : Form
     {
-        public results()
+        public Results()
         {
             InitializeComponent();
             int price = 0;

@@ -31,8 +31,8 @@ namespace проект
     public partial class MainForm : Form
     {
         public static List<objects> objList = new List<objects>();
+        public static Dictionary<objects, int> korzina = new Dictionary<objects, int>();
 
-        public static List<objects> korzina = new List<objects>();
 
         public MainForm()
         {
@@ -134,17 +134,10 @@ namespace проект
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            if (Program.Mode)
-            {
-                GeneralForms form = new GeneralForms("Корзина");
-                form.Show();
-            }
-                
+            if (Program.CartMode)
+                new CartForm().Show();
             else
-                {results form = new results(); form.Show(); }
-                
-            
-
+                new Results().Show(); 
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

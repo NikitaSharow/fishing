@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CartForm.Designer.cs">
+      <DependentUpon>CartForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GeneralForms.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,11 +65,11 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="results.cs">
+    <Compile Include="Results.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="results.Designer.cs">
-      <DependentUpon>results.cs</DependentUpon>
+    <Compile Include="Results.Designer.cs">
+      <DependentUpon>Results.cs</DependentUpon>
     </Compile>
     <Compile Include="Place.cs">
       <SubType>Form</SubType>
@@ -79,14 +85,17 @@
     <Compile Include="Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CartForm.resx">
+      <DependentUpon>CartForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GeneralForms.resx">
       <DependentUpon>GeneralForms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="results.resx">
-      <DependentUpon>results.cs</DependentUpon>
+    <EmbeddedResource Include="Results.resx">
+      <DependentUpon>Results.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Place.resx">
       <DependentUpon>Place.cs</DependentUpon>

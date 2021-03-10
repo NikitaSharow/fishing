@@ -20,9 +20,9 @@ namespace проект
         private void button1_Click(object sender, EventArgs e)
         {
             if (comboBox1.Text == "Выбор отдельных комплектующих")
-                Program.Mode = false;
+                Program.CartMode = false;
             else
-                Program.Mode = true;
+                Program.CartMode = true;
         }
     }
 }

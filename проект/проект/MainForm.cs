@@ -71,7 +71,7 @@ namespace проект
                 Controls.Add(objList[i].picture);
 
                 x = x + 160;
-                if (x >= Width)
+                if (x + 30 >= Width)
                 { y = y + 200; x = 30; }
             }
 
@@ -100,7 +100,7 @@ namespace проект
         /// </summary>
         private void SearchClick(object sender, EventArgs e)
         {
-            int x = 10;
+            int x = 30;
             int y = 100;
             for (int i = 0; i < objList.Count; i++)
             {
@@ -124,8 +124,8 @@ namespace проект
                     objList[i].picture.Location = new Point(x, y);
                     objList[i].label.Location = new Point(x, y + 120);
                     x = x + 160;
-                    if (x >= Width)
-                    { y = y + 200; x = 10; }
+                    if (x + 30 >= Width)
+                    { y = y + 200; x = 30; }
                 }
 
                 objList[i].label.Visible = objList[i].picture.Visible;

@@ -43,22 +43,30 @@ namespace проект
                 textBox1.Text = File.ReadAllText("../../../Files/" + model + ".txt");
             }
             catch { label1.Text = "Ошибка"; }
-                
+
 
             if (model == "Волга" || model == "Енисей" || model == "Обь" || model == "Корзина")
             {
                 label2.Text = "";
                 button1.Text = "Выбрать";
                 if (model == "Корзина")
-                { button1.Visible = false; pictureBox1.Visible = false; 
+                {
+                    button1.Visible = false; pictureBox1.Visible = false;
                     label1.Visible = false; textBox1.Visible = false;
                 }
             }
 
-        }
+            if (model == Program.ChoosedLb1 ||
+                model == Program.ChoosedLb2 ||
+                model == Program.ChoosedLb3)
+                label3.Visible = true;
 
+        }
+        public bool buy = false;
+        public int number = 0;
         private void button1_Click(object sender, EventArgs e)
         {
+            
             if (Program.CartMode)
             {
                 if (MainForm.korzina.ContainsKey(product))
@@ -69,16 +77,38 @@ namespace проект
 
             else
             {
+                if (buy == false)
+                { 
+                    Program.price = Program.price + product.price; 
+                    buy = true; 
+                }
                 if (product.category == "Удилища")
+                {
+                    for (int i = 0; i < MainForm.objList.Count; i++)
+                        if (Program.ChoosedLb1 == MainForm.objList[i].name && Program.ChoosedLb1 != "")
+                            Program.price = Program.price - MainForm.objList[i].price;
                     Program.ChoosedLb1 = product.name;
+                }
                 if (product.category == "Катушки")
+                {
+                    for (int i = 0; i < MainForm.objList.Count; i++)
+                        if (Program.ChoosedLb2 == MainForm.objList[i].name && Program.ChoosedLb2 != "")
+                            Program.price = Program.price - MainForm.objList[i].price;
                     Program.ChoosedLb2 = product.name;
+                }
+                    
                 if (product.category == "Лески")
+                {
+                    for (int i = 0; i < MainForm.objList.Count; i++)
+                        if (Program.ChoosedLb3 == MainForm.objList[i].name && Program.ChoosedLb3 != "")
+                            Program.price = Program.price - MainForm.objList[i].price;
                     Program.ChoosedLb3 = product.name;
+                }
+
             }
 
             if (Program.CartMode)
-            {label3.Text = "Добавлено"; label3.Visible = true; }
+            {label3.Text = "Добавлено" + number++; label3.Visible = true; }
             else
                 label3.Visible = true;        
         }

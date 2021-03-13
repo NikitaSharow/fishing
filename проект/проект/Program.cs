@@ -9,10 +9,11 @@ namespace проект
     static class Program
     {
         public static string ChoosedPlace = "";
-        public static string ChoosedLb1 = "";
-        public static string ChoosedLb2 = "";
-        public static string ChoosedLb3 = "";
+        public static string ChoosedLb1   = "";
+        public static string ChoosedLb2   = "";
+        public static string ChoosedLb3   = "";
 
+        public static int price = 0;
         /// <summary>
         /// Режим корзины (true) или подбора деталей (false)
         /// </summary>

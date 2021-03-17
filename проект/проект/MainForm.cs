@@ -51,14 +51,14 @@ namespace проект
             objList.Add(new objects("Удилище Волжанка Фортуна"  , "Удилища", 2437));
 
             int x = 30;
-            int y = 100;
+            int y = 10;
             for (int i = 0; i < objList.Count; i++)
             {
                 objList[i].label.Location = new Point(x, y + 120);
                 objList[i].label.Size = new Size(120, 75);
                 objList[i].label.Text = objList[i].name;
                 //label30.Font = new Font();
-                Controls.Add(objList[i].label);
+                panel2.Controls.Add(objList[i].label);
 
                 objList[i].picture.Location = new Point(x, y);
                 objList[i].picture.Size = new Size(120, 120);
@@ -68,10 +68,10 @@ namespace проект
                     objList[i].picture.Load("../../../Picture/" + objList[i].name + ".jpg");
                 }
                 catch (Exception) { }
-                Controls.Add(objList[i].picture);
+                panel2.Controls.Add(objList[i].picture);
 
                 x = x + 160;
-                if (x + 30 >= Width)
+                if (x + 130 >= Width)
                 { y = y + 200; x = 30; }
             }
 
@@ -101,7 +101,7 @@ namespace проект
         private void SearchClick(object sender, EventArgs e)
         {
             int x = 30;
-            int y = 100;
+            int y = 10;
             for (int i = 0; i < objList.Count; i++)
             {
                 objList[i].picture.Visible = true;
@@ -124,7 +124,7 @@ namespace проект
                     objList[i].picture.Location = new Point(x, y);
                     objList[i].label.Location = new Point(x, y + 120);
                     x = x + 160;
-                    if (x + 30 >= Width)
+                    if (x + 130 >= Width)
                     { y = y + 200; x = 30; }
                 }
 
@@ -154,6 +154,39 @@ namespace проект
         {
             Settings form = new Settings();
             form.Show();
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+            if (panel1.Size.Height > 25)
+                panel1.Size = new Size(panel1.Size.Width, 25);
+            else
+                panel1.Size = new Size(panel1.Size.Width, 100);
         }
     }
 }

@@ -21,5 +21,13 @@ namespace проект
             label6.Text = "Место ловли: " + Program.ChoosedPlace;
             label10.Text = "Сколько все это будет стоить: " + Program.price + " рублей";
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < MainForm.objList.Count; i++)
+                if (Program.ChoosedLb1 == MainForm.objList[i].name)
+                    Program.price = Program.price - MainForm.objList[i].price;
+            Program.ChoosedLb1 = "";
+        }
     }
 }

@@ -95,7 +95,6 @@ namespace проект
             this.label1.TabIndex = 0;
             this.label1.Text = "Категория";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // comboBox1
             // 
@@ -127,7 +126,6 @@ namespace проект
             this.label2.TabIndex = 2;
             this.label2.Text = "Введите название";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox1
             // 
@@ -159,7 +157,6 @@ namespace проект
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(217, 39);
             this.textBox1.TabIndex = 5;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
@@ -422,7 +419,6 @@ namespace проект
             this.label14.TabIndex = 30;
             this.label14.Text = "Цена";
             this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // numericUpDown1
             // 
@@ -435,7 +431,6 @@ namespace проект
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(124, 35);
             this.numericUpDown1.TabIndex = 31;
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // pictureBox12
             // 

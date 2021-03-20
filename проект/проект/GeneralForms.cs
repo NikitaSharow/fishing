@@ -58,7 +58,9 @@ namespace проект
 
             if (model == Program.ChoosedLb1 ||
                 model == Program.ChoosedLb2 ||
-                model == Program.ChoosedLb3)
+                model == Program.ChoosedLb3 ||
+                model == Program.ChoosedLb4 ||
+                model == Program.ChoosedLb5)
                 label3.Visible = true;
 
         }
@@ -103,6 +105,20 @@ namespace проект
                         if (Program.ChoosedLb3 == MainForm.objList[i].name && Program.ChoosedLb3 != "")
                             Program.price = Program.price - MainForm.objList[i].price;
                     Program.ChoosedLb3 = product.name;
+                }
+                if (product.category == "Крючки")
+                {
+                    for (int i = 0; i < MainForm.objList.Count; i++)
+                        if (Program.ChoosedLb4 == MainForm.objList[i].name && Program.ChoosedLb4 != "")
+                            Program.price = Program.price - MainForm.objList[i].price;
+                    Program.ChoosedLb4 = product.name;
+                }
+                if (product.category == "Поплавок")
+                {
+                    for (int i = 0; i < MainForm.objList.Count; i++)
+                        if (Program.ChoosedLb5 == MainForm.objList[i].name && Program.ChoosedLb5 != "")
+                            Program.price = Program.price - MainForm.objList[i].price;
+                    Program.ChoosedLb5 = product.name;
                 }
 
             }

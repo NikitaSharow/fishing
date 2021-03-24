@@ -98,7 +98,6 @@ namespace проект
                             Program.price = Program.price - MainForm.objList[i].price;
                     Program.ChoosedLb2 = product.name;
                 }
-                    
                 if (product.category == "Лески")
                 {
                     for (int i = 0; i < MainForm.objList.Count; i++)
@@ -113,7 +112,7 @@ namespace проект
                             Program.price = Program.price - MainForm.objList[i].price;
                     Program.ChoosedLb4 = product.name;
                 }
-                if (product.category == "Поплавок")
+                if (product.category == "Поплавки")
                 {
                     for (int i = 0; i < MainForm.objList.Count; i++)
                         if (Program.ChoosedLb5 == MainForm.objList[i].name && Program.ChoosedLb5 != "")

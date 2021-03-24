@@ -20,6 +20,8 @@ namespace проект
         /// Режим корзины (true) или подбора деталей (false)
         /// </summary>
         public static bool CartMode = false;
+
+        public static string Language = "Ru";
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>

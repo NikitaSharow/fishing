@@ -91,7 +91,7 @@ namespace проект
             this.label1.Location = new System.Drawing.Point(334, 26);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(275, 24);
+            this.label1.Size = new System.Drawing.Size(275, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Категория";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -119,10 +119,10 @@ namespace проект
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(8, 27);
+            this.label2.Location = new System.Drawing.Point(8, 26);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(217, 25);
+            this.label2.Size = new System.Drawing.Size(217, 31);
             this.label2.TabIndex = 2;
             this.label2.Text = "Введите название";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -415,7 +415,7 @@ namespace проект
             this.label14.Location = new System.Drawing.Point(636, 28);
             this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(88, 27);
+            this.label14.Size = new System.Drawing.Size(88, 30);
             this.label14.TabIndex = 30;
             this.label14.Text = "Цена";
             this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -476,10 +476,11 @@ namespace проект
             // 
             // panel2
             // 
+            this.panel2.AutoScroll = true;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 100);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1142, 541);
+            this.panel2.Size = new System.Drawing.Size(1142, 601);
             this.panel2.TabIndex = 34;
             // 
             // MainForm
@@ -488,7 +489,7 @@ namespace проект
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1142, 641);
+            this.ClientSize = new System.Drawing.Size(1142, 701);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label13);

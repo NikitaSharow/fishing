@@ -23,6 +23,11 @@ namespace проект
                 Program.CartMode = false;
             else
                 Program.CartMode = true;
+
+            if (comboBox2.Text == "Русский")
+            { Program.Language = "Ru"; comboBox2.Text = "Русский"; }
+            if (comboBox2.Text == "Английский")
+            { Program.Language = "En"; comboBox2.Text = "Английский"; }
         }
     }
 }

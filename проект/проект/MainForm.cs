@@ -33,10 +33,36 @@ namespace проект
         public static List<objects> objList = new List<objects>();
         public static Dictionary<objects, int> korzina = new Dictionary<objects, int>();
 
+        public static Dictionary<string, string> rus = new Dictionary<string, string>();
+        public static Dictionary<string, string> eng = new Dictionary<string, string>();
+
+        public static void allWords()
+        {
+            rus.Add("Введите название", "Введите название");
+            eng.Add("Введите название", "Enter the name");
+            rus.Add("Категория", "Категория");
+            eng.Add("Категория", "Category");
+            rus.Add("Цена", "Цена");
+            eng.Add("Цена", "Price");
+            rus.Add("Поиск", "Поиск");
+            eng.Add("Поиск", "Search");
+            rus.Add("Итог", "Итог");
+            eng.Add("Итог", "Result");
+        }
+
+        void rename(Dictionary<string, string> words)
+        {
+            label2.Text = words["Введите название"];
+            label1.Text = words["Категория"];
+            label14.Text = words["Цена"];
+            button3.Text = words["Поиск"];
+            button2.Text = words["Итог"];
+        }
 
         public MainForm()
         {
             InitializeComponent();
+            allWords();
 
             objList.Add(new objects("Удочка Deukio"    , "Удочки"  , 859 ));
             objList.Add(new objects("Удочка RAPALA"    , "Удочки"  , 1499));
@@ -159,7 +185,8 @@ namespace проект
         private void pictureBox12_Click(object sender, EventArgs e)
         {
             Settings form = new Settings();
-            form.Show();
+            form.ShowDialog();
+            button4_Click(null, null);
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
@@ -168,6 +195,14 @@ namespace проект
                 panel1.Size = new Size(panel1.Size.Width, 25);
             else
                 panel1.Size = new Size(panel1.Size.Width, 100);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (Program.Language == "Ru")
+                rename(rus);
+            if (Program.Language == "En")
+                rename(eng);
         }
     }
 }

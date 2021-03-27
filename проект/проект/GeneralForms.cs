@@ -65,7 +65,7 @@ namespace проект
 
         }
         public bool buy = false;
-        public int number = 0;
+        public int number = 1;
         private void button1_Click(object sender, EventArgs e)
         {
             
@@ -123,7 +123,7 @@ namespace проект
             }
 
             if (Program.CartMode)
-            {label3.Text = "Добавлено" + number++; label3.Visible = true; }
+            {label3.Text = "Добавлено " + number++; label3.Visible = true; }
             else
                 label3.Visible = true;        
         }

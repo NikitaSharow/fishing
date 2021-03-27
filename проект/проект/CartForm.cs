@@ -15,8 +15,9 @@ namespace проект
         public CartForm()
         {
             InitializeComponent();
+            
 
-            int y = 20;
+            int y = 50;
             foreach (KeyValuePair<objects, int> pair in MainForm.korzina)
             {
                 objects obj = pair.Key;
@@ -27,6 +28,7 @@ namespace проект
                 if (count >= 5)
                     shtuk = " штук)";
 
+                label2.Visible = false;
                 Label label = new Label();
                 label.Location = new Point(20, y);
                 label.Size = new Size(690, 45);

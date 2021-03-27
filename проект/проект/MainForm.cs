@@ -48,6 +48,18 @@ namespace проект
             eng.Add("Поиск", "Search");
             rus.Add("Итог", "Итог");
             eng.Add("Итог", "Result");
+            rus.Add("Выбрать место ловли", "Выбрать место ловли");
+            eng.Add("Выбрать место ловли", "Choose a fishing spot");
+            rus.Add("Выберите категорию", "Выберите категорию");
+            eng.Add("Выберите категорию", "Select a category");
+            rus.Add("Настройки", "Настройки");
+            eng.Add("Настройки", "Settings");
+            rus.Add("Режим", "Режим");
+            eng.Add("Режим", "Mode");
+            rus.Add("Язык", "Язык");
+            eng.Add("Язык", "Language");
+            rus.Add("Применить", "Применить");
+            eng.Add("Применить", "Apply");
         }
 
         void rename(Dictionary<string, string> words)
@@ -57,6 +69,8 @@ namespace проект
             label14.Text = words["Цена"];
             button3.Text = words["Поиск"];
             button2.Text = words["Итог"];
+            button1.Text = words["Выбрать место ловли"];
+            comboBox1.Text = words["Выберите категорию"];
         }
 
         public MainForm()

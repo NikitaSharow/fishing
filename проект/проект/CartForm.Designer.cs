@@ -31,6 +31,7 @@ namespace проект
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -51,12 +52,22 @@ namespace проект
             this.label2.TabIndex = 1;
             this.label2.Text = "Ничего";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(625, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(105, 38);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Цена:";
+            // 
             // CartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 38F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(732, 580);
+            this.ClientSize = new System.Drawing.Size(829, 580);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -73,5 +84,6 @@ namespace проект
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

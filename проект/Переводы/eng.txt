@@ -1,0 +1,11 @@
+Введите название, Enter the name
+Категория, Category
+Цена, Price
+Поиск, Search
+Итог, Result
+Выбрать место ловли, Choose a fishing spot
+Выберите категорию, Select a category
+Настройки, Settings
+Режим, Mode
+Язык, Language
+Применить, Apply

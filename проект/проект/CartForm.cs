@@ -15,8 +15,8 @@ namespace проект
         public CartForm()
         {
             InitializeComponent();
-            
 
+            label3.Text = "Цена: " + Program.cartPrice;
             int y = 50;
             foreach (KeyValuePair<objects, int> pair in MainForm.korzina)
             {

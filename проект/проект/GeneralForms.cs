@@ -71,6 +71,7 @@ namespace проект
             
             if (Program.CartMode)
             {
+                Program.cartPrice = Program.cartPrice + product.price; 
                 if (MainForm.korzina.ContainsKey(product))
                     MainForm.korzina[product]++;
                 else

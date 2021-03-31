@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,6 +39,20 @@ namespace проект
 
         public static void allWords()
         {
+            string[] rusLines = File.ReadAllLines("../../../Переводы/rus.txt");
+            foreach (string line in rusLines)
+            {
+                string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
+                rus.Add(parts[0], parts[1]);
+            }
+            string[] engLines = File.ReadAllLines("../../../Переводы/eng.txt");
+            foreach (string line in engLines)
+            {
+                string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
+                eng.Add(parts[0], parts[1]);
+            }
+
+            /*
             rus.Add("Введите название", "Введите название");
             eng.Add("Введите название", "Enter the name");
             rus.Add("Категория", "Категория");
@@ -59,7 +74,8 @@ namespace проект
             rus.Add("Язык", "Язык");
             eng.Add("Язык", "Language");
             rus.Add("Применить", "Применить");
-            eng.Add("Применить", "Apply");
+            eng.Add("Применить", "Apply")
+            */
         }
 
         void rename(Dictionary<string, string> words)
@@ -78,6 +94,14 @@ namespace проект
             InitializeComponent();
             allWords();
 
+            string[] lines = File.ReadAllLines("../../../Массив.txt");
+            foreach (string line in lines)
+            {
+                string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
+                objList.Add(new objects(parts[0], parts[1], Convert.ToInt32(parts[2])));
+            }
+                
+            /*
             objList.Add(new objects("Удочка Deukio"    , "Удочки"  , 859 ));
             objList.Add(new objects("Удочка RAPALA"    , "Удочки"  , 1499));
             objList.Add(new objects("Катушка Daiwa"    , "Катушки" , 2772));
@@ -95,6 +119,7 @@ namespace проект
             objList.Add(new objects("Поплавок Briscola", "Поплавки", 155 ));
             objList.Add(new objects("Поплавок Пирс Рус", "Поплавки", 23  ));
             objList.Add(new objects("Поплавок Trabucco", "Поплавки", 270 ));
+            */
 
             int x = 30;
             int y = 10;

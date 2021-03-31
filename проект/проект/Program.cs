@@ -16,6 +16,7 @@ namespace проект
         public static string ChoosedLb5   = "";
 
         public static int price = 0;
+        public static int cartPrice = 0;
         /// <summary>
         /// Режим корзины (true) или подбора деталей (false)
         /// </summary>

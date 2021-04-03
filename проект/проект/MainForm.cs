@@ -88,13 +88,13 @@ namespace проект
             button1.Text = words["Выбрать место ловли"];
             comboBox1.Text = words["Выберите категорию"];
         }
-
+        
         public MainForm()
         {
             InitializeComponent();
             allWords();
 
-            string[] lines = File.ReadAllLines("../../../Массив.txt");
+            string[] lines = File.ReadAllLines("../../../Objects.txt");
             foreach (string line in lines)
             {
                 string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
@@ -242,6 +242,12 @@ namespace проект
                 rename(rus);
             if (Program.Language == "En")
                 rename(eng);
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            NewObj form = new NewObj();
+            form.Show();
         }
     }
 }

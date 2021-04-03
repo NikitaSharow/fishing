@@ -67,6 +67,7 @@ namespace проект
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -445,6 +446,7 @@ namespace проект
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.pictureBox13);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.pictureBox12);
@@ -482,6 +484,17 @@ namespace проект
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1142, 601);
             this.panel2.TabIndex = 34;
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.button4.Location = new System.Drawing.Point(973, 19);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(112, 37);
+            this.button4.TabIndex = 33;
+            this.button4.Text = "Добавить";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // MainForm
             // 
@@ -579,6 +592,7 @@ namespace проект
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button button4;
     }
 }
 

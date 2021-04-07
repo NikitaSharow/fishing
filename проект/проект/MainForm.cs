@@ -88,38 +88,24 @@ namespace проект
             button1.Text = words["Выбрать место ловли"];
             comboBox1.Text = words["Выберите категорию"];
         }
-        
-        public MainForm()
-        {
-            InitializeComponent();
-            allWords();
 
+        void ReadAllProducts()
+        {
+            objList.Clear();
             string[] lines = File.ReadAllLines("../../../Objects.txt");
             foreach (string line in lines)
             {
                 string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
                 objList.Add(new objects(parts[0], parts[1], Convert.ToInt32(parts[2])));
             }
-                
-            /*
-            objList.Add(new objects("Удочка Deukio"    , "Удочки"  , 859 ));
-            objList.Add(new objects("Удочка RAPALA"    , "Удочки"  , 1499));
-            objList.Add(new objects("Катушка Daiwa"    , "Катушки" , 2772));
-            objList.Add(new objects("Катушка Shimano"  , "Катушки" , 4200));
-            objList.Add(new objects("Катушка Stinger"  , "Катушки" , 3300));
-            objList.Add(new objects("Леска Prologic"   , "Лески"   , 349 ));
-            objList.Add(new objects("Леска Sunline"    , "Лески"   , 344 ));
-            objList.Add(new objects("Леска Trabucco"   , "Лески"   , 300 ));
-            objList.Add(new objects("Удилище Maximus Sorcerer"     , "Удилища", 2567));
-            objList.Add(new objects("Удилище Волжанка Классик"     , "Удилища", 1130));
-            objList.Add(new objects("Удилище Волжанка Фортуна"     , "Удилища", 2437));
-            objList.Add(new objects("Крючки Owner"     , "Крючки"  , 150 ));
-            objList.Add(new objects("Крючки VMC"       , "Крючки"  , 4   ));
-            objList.Add(new objects("Крючки Savage"    , "Крючки"  , 199 ));
-            objList.Add(new objects("Поплавок Briscola", "Поплавки", 155 ));
-            objList.Add(new objects("Поплавок Пирс Рус", "Поплавки", 23  ));
-            objList.Add(new objects("Поплавок Trabucco", "Поплавки", 270 ));
-            */
+        }
+        
+        public MainForm()
+        {
+            InitializeComponent();
+            allWords();
+            ReadAllProducts();
+
 
             int x = 30;
             int y = 10;
@@ -247,7 +233,9 @@ namespace проект
         private void button4_Click_1(object sender, EventArgs e)
         {
             NewObj form = new NewObj();
-            form.Show();
+            form.ShowDialog();
+            form.Dispose();
+            ReadAllProducts();
         }
     }
 }

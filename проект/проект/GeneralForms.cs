@@ -16,7 +16,12 @@ namespace проект
         /// Модель удочки
         /// </summary>
         objects product;
-
+        void rename(Dictionary<string, string> words)
+        {
+            label2.Text = words["Цена"] + ": ";
+            label3.Text = words["Выбрано"];
+            button1.Text = words["Добавить в корзину"];
+        }
         /// <summary>
         /// Форма для удочек
         /// </summary>
@@ -24,6 +29,10 @@ namespace проект
         public GeneralForms(string model, string Price = "")
         {
             InitializeComponent();
+            if (Program.Language == "En")
+                rename(MainForm.eng);
+            else
+                rename(MainForm.rus);
 
             //Что за удочка прилетела на форму
             foreach (objects choosenProduct in MainForm.objList)
@@ -31,7 +40,10 @@ namespace проект
                 if (model == choosenProduct.name)
                 {
                     product = choosenProduct;
-                    label2.Text = "Цена: " + product.price + " руб.";
+                    if (Program.Language == "En")
+                        label2.Text = label2.Text + product.price + " руб.";
+                    else
+                        label2.Text = label2.Text + product.price + " rub.";
                     pictureBox1.Image = product.picture.Image;
                 }
             }

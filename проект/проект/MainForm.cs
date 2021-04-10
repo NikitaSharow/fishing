@@ -51,31 +51,6 @@ namespace проект
                 string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
                 eng.Add(parts[0], parts[1]);
             }
-
-            /*
-            rus.Add("Введите название", "Введите название");
-            eng.Add("Введите название", "Enter the name");
-            rus.Add("Категория", "Категория");
-            eng.Add("Категория", "Category");
-            rus.Add("Цена", "Цена");
-            eng.Add("Цена", "Price");
-            rus.Add("Поиск", "Поиск");
-            eng.Add("Поиск", "Search");
-            rus.Add("Итог", "Итог");
-            eng.Add("Итог", "Result");
-            rus.Add("Выбрать место ловли", "Выбрать место ловли");
-            eng.Add("Выбрать место ловли", "Choose a fishing spot");
-            rus.Add("Выберите категорию", "Выберите категорию");
-            eng.Add("Выберите категорию", "Select a category");
-            rus.Add("Настройки", "Настройки");
-            eng.Add("Настройки", "Settings");
-            rus.Add("Режим", "Режим");
-            eng.Add("Режим", "Mode");
-            rus.Add("Язык", "Язык");
-            eng.Add("Язык", "Language");
-            rus.Add("Применить", "Применить");
-            eng.Add("Применить", "Apply")
-            */
         }
 
         void rename(Dictionary<string, string> words)
@@ -83,6 +58,7 @@ namespace проект
             label2.Text = words["Введите название"];
             label1.Text = words["Категория"];
             label14.Text = words["Цена"];
+            button4.Text = words["Добавить"];
             button3.Text = words["Поиск"];
             button2.Text = words["Итог"];
             button1.Text = words["Выбрать место ловли"];

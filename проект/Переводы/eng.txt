@@ -9,3 +9,19 @@
 Режим, Mode
 Язык, Language
 Применить, Apply
+Добавить, Add
+Что бы добавить что-нибудь укажите:, To add something specify:
+Название, Name
+Описание, Description
+Загрузить картинку, Upload image
+Вот что вы выбрали, Here's what you chose
+Удилище: , Rod: 
+Катушка: , Coil: 
+Леска: , Line: 
+Крючок: , Hook: 
+Поплавок: , Float: 
+Место ловли: , Fishing place: 
+Вот что вы сможете поймать, Here's what you can catch
+Сколько все это будет стоить: , How much will it all cost: 
+Выбрано, Selected
+Добавить в корзину, Add to сart

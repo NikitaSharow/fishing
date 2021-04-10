@@ -13,9 +13,24 @@ namespace проект
 {
     public partial class NewObj : Form
     {
+        void rename(Dictionary<string, string> words)
+        {
+            label1.Text = words["Что бы добавить что-нибудь укажите:"];
+            label2.Text = words["Название"];
+            label3.Text = words["Категория"];
+            label4.Text = words["Цена"];
+            label5.Text = words["Описание"];
+            button1.Text = words["Добавить"];
+            button2.Text = words["Загрузить картинку"];
+        }
+
         public NewObj()
         {
             InitializeComponent();
+            if (Program.Language == "En")
+                rename(MainForm.eng);
+            else
+                rename(MainForm.rus);
         }
 
         private void button1_Click(object sender, EventArgs e)

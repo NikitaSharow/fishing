@@ -12,6 +12,15 @@ namespace проект
 {
     public partial class CartForm : Form
     {
+        void rename(Dictionary<string, string> words)
+        {
+            /*
+            label1.Text = words["Вот что вы выбрали:"];
+            label2.Text = words["Ничего"];
+            label3.Text = words["Цена" + ": "];
+            string shtuk = words["штук"]; */
+            //Доделать
+        }
         public CartForm()
         {
             InitializeComponent();

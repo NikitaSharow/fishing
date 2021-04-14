@@ -14,18 +14,19 @@ namespace проект
     {
         void rename(Dictionary<string, string> words)
         {
-            /*
-            label1.Text = words["Вот что вы выбрали:"];
+            label1.Text = words["Вот что вы выбрали"] + ":";
             label2.Text = words["Ничего"];
-            label3.Text = words["Цена" + ": "];
-            string shtuk = words["штук"]; */
-            //Доделать
+            label3.Text = words["Цена"] + ": ";
         }
         public CartForm()
         {
             InitializeComponent();
+            if (Program.Language == "En")
+                rename(MainForm.eng);
+            else
+                rename(MainForm.rus);
 
-            label3.Text = "Цена: " + Program.cartPrice;
+            label3.Text = label3.Text + Program.cartPrice;
             int y = 50;
             foreach (KeyValuePair<objects, int> pair in MainForm.korzina)
             {

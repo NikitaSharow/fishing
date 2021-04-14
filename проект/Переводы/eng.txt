@@ -25,3 +25,6 @@
 Сколько все это будет стоить: , How much will it all cost: 
 Выбрано, Selected
 Добавить в корзину, Add to сart
+Ничего, Nothing
+штука, thing
+рублей, rubles

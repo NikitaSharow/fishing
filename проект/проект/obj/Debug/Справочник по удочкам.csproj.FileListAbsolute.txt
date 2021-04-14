@@ -94,3 +94,4 @@ D:\НГ_pk22\fishing-main-git\fishing\проект\проект\obj\Debug\Спр
 D:\НГ_pk22\fishing-main-git\fishing\проект\проект\obj\Debug\проект.exe
 D:\НГ_pk22\fishing-main-git\fishing\проект\проект\obj\Debug\проект.pdb
 D:\НГ_pk22\fishing-main-git\fishing\проект\проект\obj\Debug\проект.NewObj.resources
+D:\НГ_pk22\fishing-main-git\fishing\проект\проект\obj\Debug\проект.Registration.resources

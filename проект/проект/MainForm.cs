@@ -213,5 +213,11 @@ namespace проект
             form.Dispose();
             ReadAllProducts();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Registration form = new Registration();
+            form.Show();
+        }
     }
 }

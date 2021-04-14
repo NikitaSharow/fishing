@@ -64,10 +64,11 @@ namespace проект
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.button4 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -89,7 +90,7 @@ namespace проект
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.2F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(334, 26);
+            this.label1.Location = new System.Drawing.Point(334, 38);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(275, 30);
@@ -110,7 +111,7 @@ namespace проект
             "Поплавки",
             "Наживки",
             "Удочки"});
-            this.comboBox1.Location = new System.Drawing.Point(334, 55);
+            this.comboBox1.Location = new System.Drawing.Point(334, 67);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(275, 37);
@@ -120,7 +121,7 @@ namespace проект
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(8, 26);
+            this.label2.Location = new System.Drawing.Point(8, 38);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(217, 31);
@@ -154,7 +155,7 @@ namespace проект
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.8F);
-            this.textBox1.Location = new System.Drawing.Point(8, 55);
+            this.textBox1.Location = new System.Drawing.Point(8, 67);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(217, 39);
             this.textBox1.TabIndex = 5;
@@ -162,7 +163,7 @@ namespace проект
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.button1.Location = new System.Drawing.Point(748, 55);
+            this.button1.Location = new System.Drawing.Point(748, 67);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(219, 39);
             this.button1.TabIndex = 6;
@@ -194,7 +195,7 @@ namespace проект
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(973, 55);
+            this.button2.Location = new System.Drawing.Point(973, 67);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(112, 39);
             this.button2.TabIndex = 9;
@@ -204,7 +205,7 @@ namespace проект
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(231, 55);
+            this.button3.Location = new System.Drawing.Point(231, 67);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(95, 39);
             this.button3.TabIndex = 10;
@@ -413,7 +414,7 @@ namespace проект
             // 
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.2F);
             this.label14.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label14.Location = new System.Drawing.Point(636, 28);
+            this.label14.Location = new System.Drawing.Point(636, 40);
             this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(88, 30);
@@ -423,7 +424,7 @@ namespace проект
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(618, 58);
+            this.numericUpDown1.Location = new System.Drawing.Point(618, 70);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -436,7 +437,7 @@ namespace проект
             // pictureBox12
             // 
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(1091, 54);
+            this.pictureBox12.Location = new System.Drawing.Point(1091, 66);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(39, 39);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -446,6 +447,7 @@ namespace проект
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.pictureBox13);
             this.panel1.Controls.Add(this.textBox1);
@@ -461,8 +463,19 @@ namespace проект
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1142, 100);
+            this.panel1.Size = new System.Drawing.Size(1142, 111);
             this.panel1.TabIndex = 33;
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.button4.Location = new System.Drawing.Point(973, 31);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(112, 37);
+            this.button4.TabIndex = 33;
+            this.button4.Text = "Добавить";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // pictureBox13
             // 
@@ -480,21 +493,21 @@ namespace проект
             // 
             this.panel2.AutoScroll = true;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 100);
+            this.panel2.Location = new System.Drawing.Point(0, 111);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1142, 601);
+            this.panel2.Size = new System.Drawing.Size(1142, 590);
             this.panel2.TabIndex = 34;
             // 
-            // button4
+            // button6
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.button4.Location = new System.Drawing.Point(973, 19);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(112, 37);
-            this.button4.TabIndex = 33;
-            this.button4.Text = "Добавить";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.button6.Location = new System.Drawing.Point(748, 31);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(219, 37);
+            this.button6.TabIndex = 35;
+            this.button6.Text = "Зарегистрироваться";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // MainForm
             // 
@@ -593,6 +606,7 @@ namespace проект
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button6;
     }
 }
 

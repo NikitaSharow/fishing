@@ -15,33 +15,18 @@ namespace проект
         void rename(Dictionary<string, string> words)
         {
             label7.Text = words["Вот что вы выбрали"];
-            label1.Text = words["Удилище: "];
-            label2.Text = words["Катушка: "];
-            label3.Text = words["Леска: "];
-            label4.Text = words["Крючок: "];
-            label5.Text = words["Поплавок: "];
-            label6.Text = words["Место ловли: "];
+            label1.Text = words["Удилище: "] + Program.ChoosedLb1;
+            label2.Text = words["Катушка: "] + Program.ChoosedLb2;
+            label3.Text = words["Леска: "] + Program.ChoosedLb3;
+            label4.Text = words["Крючок: "] + Program.ChoosedLb4;
+            label5.Text = words["Поплавок: "] + Program.ChoosedLb5;
+            label6.Text = words["Место ловли: "] + Program.ChoosedPlace;
             label8.Text = words["Вот что вы сможете поймать"];
-            label10.Text = words["Сколько все это будет стоить: "];
+            label10.Text = words["Сколько все это будет стоить: "] + Program.price + words["рублей"];
         }
         public Results()
         {
             InitializeComponent();
-            if (Program.Language == "En")
-                rename(MainForm.eng);
-            else
-                rename(MainForm.rus);
-
-            label1.Text = label1.Text + Program.ChoosedLb1;
-            label2.Text = label2.Text + Program.ChoosedLb2;
-            label3.Text = label3.Text + Program.ChoosedLb3;
-            label4.Text = label4.Text + Program.ChoosedLb4;
-            label5.Text = label5.Text + Program.ChoosedLb5;
-            label6.Text = label6.Text + Program.ChoosedPlace;
-            if (Program.Language == "En")
-                label10.Text = label10.Text + Program.price + " rubles";
-            else
-                label10.Text = label10.Text + Program.price + " рублей";
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -100,6 +85,14 @@ namespace проект
         {
             Program.ChoosedPlace = "";
             label6.Text = label6.Text + Program.ChoosedPlace;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (Program.Language == "En")
+                rename(MainForm.eng);
+            else
+                rename(MainForm.rus);
         }
     }
 }

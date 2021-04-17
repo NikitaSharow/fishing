@@ -30,6 +30,7 @@ namespace проект
             int y = 50;
             foreach (KeyValuePair<objects, int> pair in MainForm.korzina)
             {
+                /*
                 objects obj = pair.Key;
                 int count = pair.Value;
                 string shtuk = " штука)";
@@ -44,6 +45,13 @@ namespace проект
                 label.Size = new Size(690, 45);
                 label.Text = obj.name + " (" + count.ToString() + shtuk;
                 Controls.Add(label);
+                */
+
+                CartUC obj1 = new CartUC(pair.Key);
+                obj1.Location = new Point(10, y);
+                Controls.Add(obj1);
+
+                label2.Visible = false;
                 y = y + 50;
             }
         }

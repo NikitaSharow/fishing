@@ -24,6 +24,7 @@ namespace проект
                 MessageBox.Show("Успешно");
                 Close();
             }
+
         }
 
         private void button2_Click(object sender, EventArgs e)

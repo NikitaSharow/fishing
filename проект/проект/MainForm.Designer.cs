@@ -64,11 +64,11 @@ namespace проект
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -466,6 +466,17 @@ namespace проект
             this.panel1.Size = new System.Drawing.Size(1142, 111);
             this.panel1.TabIndex = 33;
             // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.button6.Location = new System.Drawing.Point(748, 31);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(219, 37);
+            this.button6.TabIndex = 35;
+            this.button6.Text = "Зарегистрироваться";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
@@ -497,17 +508,6 @@ namespace проект
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1142, 590);
             this.panel2.TabIndex = 34;
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.button6.Location = new System.Drawing.Point(748, 31);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(219, 37);
-            this.button6.TabIndex = 35;
-            this.button6.Text = "Зарегистрироваться";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // MainForm
             // 

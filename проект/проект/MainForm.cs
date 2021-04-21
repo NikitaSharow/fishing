@@ -208,16 +208,24 @@ namespace проект
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            NewObj form = new NewObj();
-            form.ShowDialog();
-            form.Dispose();
-            ReadAllProducts();
+            if(Registration.login != "Admin")
+                MessageBox.Show("Вы не админ");
+            else
+            {
+                NewObj form = new NewObj();
+                form.ShowDialog();
+                form.Dispose();
+                ReadAllProducts();
+             }
+           
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             Registration form = new Registration();
             form.Show();
+
+
         }
     }
 }

@@ -42,19 +42,18 @@ namespace проект
             {
                 if (textBox1.Text != "" & textBox2.Text != "")
                 {
-                
                     if (textBox1.Text == logPass[i] & textBox2.Text == logPass[i + 1])
-                    { MessageBox.Show("Вы уже зарегистрированы"); login = textBox1.Text; Close();}
-                    else
+                    { MessageBox.Show("Вы уже зарегистрированы"); login = textBox1.Text;}
+                    else if (login == "")
                     {
                         File.AppendAllText("../../../loginPasswords.txt", Environment.NewLine +
                         textBox1.Text + "," + textBox2.Text);
                         MessageBox.Show("Вы зарегистрировались");
                         login = textBox1.Text;
-                        Close();
                     }
                 }  
             }
+            Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -72,17 +71,17 @@ namespace проект
                 {
                     if (textBox1.Text == logPass[i] & textBox2.Text == logPass[i + 1])
                     {
-                        if (logPass[i] == "Admin")
-                            MessageBox.Show("Вы вошли в аккаунт админа");
-                        else
-                            MessageBox.Show("Вы вошли в аккаунт");
                         login = textBox1.Text;
                         Close();
                     }
-                    else
-                        MessageBox.Show("Вы не зарегистрированы");
                 }
             }
+            if (login == "")
+                MessageBox.Show("Вы не зарегистрированы");
+            else if(login == "Admin")
+                MessageBox.Show("Вы вошли в аккаунт админа");
+            else
+                MessageBox.Show("Вы вошли в аккаунт");
         }
     }
 }

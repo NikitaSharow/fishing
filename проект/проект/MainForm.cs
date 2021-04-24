@@ -82,7 +82,6 @@ namespace проект
             allWords();
             ReadAllProducts();
 
-
             int x = 30;
             int y = 10;
             for (int i = 0; i < objList.Count; i++)
@@ -204,6 +203,8 @@ namespace проект
                 rename(rus);
             if (Program.Language == "En")
                 rename(eng);
+            if (Registration.login != "")
+                label15.Text = "Вы вошли в аккаунт " + Registration.login;
         }
 
         private void button4_Click_1(object sender, EventArgs e)
@@ -223,9 +224,8 @@ namespace проект
         private void button6_Click(object sender, EventArgs e)
         {
             Registration form = new Registration();
-            form.Show();
-
-
+            form.ShowDialog();
+            button4_Click(null, null);
         }
     }
 }

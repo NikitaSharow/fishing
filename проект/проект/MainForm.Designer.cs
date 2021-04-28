@@ -64,14 +64,18 @@ namespace проект
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label15 = new System.Windows.Forms.Label();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -86,8 +90,9 @@ namespace проект
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -451,6 +456,7 @@ namespace проект
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.pictureBox14);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.button6);
@@ -471,6 +477,27 @@ namespace проект
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1142, 111);
             this.panel1.TabIndex = 33;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
+            this.pictureBox14.Location = new System.Drawing.Point(1086, 0);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox14.TabIndex = 37;
+            this.pictureBox14.TabStop = false;
+            this.toolTip2.SetToolTip(this.pictureBox14, "Не знаете что выбрать?");
+            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label15.Location = new System.Drawing.Point(757, 9);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(0, 20);
+            this.label15.TabIndex = 36;
             // 
             // button6
             // 
@@ -515,25 +542,53 @@ namespace проект
             this.panel2.Size = new System.Drawing.Size(1142, 590);
             this.panel2.TabIndex = 34;
             // 
-            // label15
+            // panel3
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label15.Location = new System.Drawing.Point(757, 9);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(0, 20);
-            this.label15.TabIndex = 36;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.linkLabel3);
+            this.panel3.Controls.Add(this.linkLabel2);
+            this.panel3.Controls.Add(this.linkLabel1);
+            this.panel3.Location = new System.Drawing.Point(852, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(233, 108);
+            this.panel3.TabIndex = 38;
+            this.panel3.Visible = false;
             // 
-            // pictureBox14
+            // linkLabel1
             // 
-            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(1086, 0);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox14.TabIndex = 37;
-            this.pictureBox14.TabStop = false;
-            this.toolTip2.SetToolTip(this.pictureBox14, "Не знаете что выбрать?");
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.linkLabel1.Location = new System.Drawing.Point(3, 7);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(225, 21);
+            this.linkLabel1.TabIndex = 1;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Как выбрать катушку?";
+            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.linkLabel2.Location = new System.Drawing.Point(3, 38);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(225, 21);
+            this.linkLabel2.TabIndex = 2;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Как выбрать удилище?";
+            this.linkLabel2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
+            // linkLabel3
+            // 
+            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.linkLabel3.Location = new System.Drawing.Point(3, 71);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(225, 21);
+            this.linkLabel3.TabIndex = 3;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "Как выбрать леску?";
+            this.linkLabel3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // MainForm
             // 
@@ -588,8 +643,9 @@ namespace проект
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -637,6 +693,10 @@ namespace проект
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.ToolTip toolTip2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }
 

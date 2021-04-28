@@ -48,6 +48,9 @@ namespace проект
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -229,12 +232,44 @@ namespace проект
             this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.button1.Location = new System.Drawing.Point(465, 644);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(178, 37);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Заказать";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label11.Location = new System.Drawing.Point(75, 615);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(252, 29);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "Введите свою почту:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBox1.Location = new System.Drawing.Point(12, 647);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(404, 34);
+            this.textBox1.TabIndex = 18;
+            // 
             // Results
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(23F, 46F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(703, 693);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
@@ -262,6 +297,7 @@ namespace проект
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -284,5 +320,8 @@ namespace проект
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

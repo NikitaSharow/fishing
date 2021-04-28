@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -93,6 +95,24 @@ namespace проект
                 rename(MainForm.eng);
             else
                 rename(MainForm.rus);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MailAddress from = new MailAddress("1337coolmail1337@gmail.com", "Закзчик");
+            MailAddress to = new MailAddress(textBox1.Text);
+            MailMessage m = new MailMessage(from, to);
+
+            m.Subject = "Заказ пришел";
+            m.Body = "Поздравляем вы купили ничего за ничего!!!";
+            m.IsBodyHtml = true;
+
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+            smtp.Credentials = new NetworkCredential("1337coolmail1337@gmail.com", ",mnbvcxz");
+            smtp.EnableSsl = true;
+            smtp.Send(m);
+
+            MessageBox.Show("Готово");
         }
     }
 }

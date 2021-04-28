@@ -194,7 +194,7 @@ namespace проект
             if (panel1.Size.Height > 25)
                 panel1.Size = new Size(panel1.Size.Width, 25);
             else
-                panel1.Size = new Size(panel1.Size.Width, 100);
+                panel1.Size = new Size(panel1.Size.Width, 111);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -226,6 +226,26 @@ namespace проект
             Registration form = new Registration();
             form.ShowDialog();
             button4_Click(null, null);
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.huntworld.ru/blog/kak-vybrat-katushku-dlya-spinninga-video/");
+        }   
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+            panel3.Visible = !panel3.Visible;
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.huntworld.ru/blog/kak-vybrat-spinningovoe-udilishche-/");
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.huntworld.ru/blog/top-9-lesok-dlya-zimney-rybalki/");
         }
     }
 }

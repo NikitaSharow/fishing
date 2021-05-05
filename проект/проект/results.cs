@@ -101,11 +101,18 @@ namespace проект
         {
             MailAddress from = new MailAddress("1337coolmail1337@gmail.com", "Закзчик");
             MailAddress to = new MailAddress(textBox1.Text);
-            MailMessage m = new MailMessage(from, to);
-
+            MailMessage m = new MailMessage(from, to); 
+           
             m.Subject = "Заказ пришел";
-            m.Body = "Поздравляем вы купили ничего за ничего!!!";
-            m.IsBodyHtml = true;
+            m.Body = " Поздравляем вы купили:" +
+                Environment.NewLine +
+                Environment.NewLine + label1.Text +
+                Environment.NewLine + label2.Text +
+                Environment.NewLine + label3.Text +
+                Environment.NewLine + label4.Text +
+                Environment.NewLine + label5.Text +
+                Environment.NewLine + " По цене:" + Program.price + "рублей";
+            m.IsBodyHtml = false;
 
             SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
             smtp.Credentials = new NetworkCredential("1337coolmail1337@gmail.com", ",mnbvcxz");

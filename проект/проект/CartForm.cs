@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -47,7 +50,7 @@ namespace проект
                 Controls.Add(label);
                 */
 
-                CartUC obj1 = new CartUC(pair.Key);
+                CartUC obj1 = new CartUC(pair.Key, pair.Value);
                 obj1.Location = new Point(10, y);
                 Controls.Add(obj1);
 
@@ -59,6 +62,38 @@ namespace проект
         private void CartForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MailAddress from = new MailAddress("1337coolmail1337@gmail.com", "Закзчик");
+            MailAddress to = new MailAddress(textBox1.Text);
+            MailMessage m = new MailMessage(from, to);
+
+            m.Subject = "Заказ пришел";
+            m.Body = "Поздравляем вы купили:";
+
+            File.WriteAllText("MailBody.csv", "Название,Категория,Ценник,Количество,Цена", Encoding.UTF8);
+            foreach(KeyValuePair<objects, int> pair in MainForm.korzina)
+            {
+                objects udochka = pair.Key;
+                int a = udochka.price * pair.Value;
+                File.AppendAllText("MailBody.csv", Environment.NewLine +
+                    udochka.name + "," +
+                    udochka.category + "," +
+                    udochka.price + "," +
+                    pair.Value.ToString() + "," +
+                    a.ToString());
+            }
+
+            m.Attachments.Add(new Attachment("MailBody.csv"));
+
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+            smtp.Credentials = new NetworkCredential("1337coolmail1337@gmail.com", ",mnbvcxz");
+            smtp.EnableSsl = true;
+            smtp.Send(m);
+
+            MessageBox.Show("Готово");
         }
     }
 }

@@ -13,12 +13,18 @@ namespace проект
     public partial class CartUC : UserControl
     {
         objects obj1;
-        public CartUC(objects obj)
+        public CartUC(objects obj, int value)
         {
             obj1 = obj;
             InitializeComponent();
 
-            label1.Text = obj.name;
+            string shtuk = " штука)";
+            if (value >= 2)
+                shtuk = " штуки)";
+            if (value >= 5)
+                shtuk = " штук)";
+
+            label1.Text = obj.name + " (" + value.ToString() + shtuk;
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)

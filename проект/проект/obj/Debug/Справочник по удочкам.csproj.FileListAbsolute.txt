@@ -96,3 +96,4 @@ D:\НГ_pk22\fishing-main-git\fishing\проект\проект\obj\Debug\про
 D:\НГ_pk22\fishing-main-git\fishing\проект\проект\obj\Debug\проект.NewObj.resources
 D:\НГ_pk22\fishing-main-git\fishing\проект\проект\obj\Debug\проект.Registration.resources
 D:\НГ_pk22\fishing-main-git\fishing\проект\проект\obj\Debug\проект.CartUC.resources
+D:\НГ_pk22\fishing-main-git\fishing\проект\проект\obj\Debug\проект.ResponseForm.resources

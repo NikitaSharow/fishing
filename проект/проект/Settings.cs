@@ -42,5 +42,11 @@ namespace проект
             else if (comboBox2.Text == "Английский")
                 Program.Language = "En"; 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ResponseForm form = new ResponseForm();
+            form.Show();
+        }
     }
 }

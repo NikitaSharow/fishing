@@ -72,7 +72,7 @@ namespace проект
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.8F);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label2.Location = new System.Drawing.Point(724, 489);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(240, 32);
@@ -118,7 +118,7 @@ namespace проект
             this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "GeneralForms";
-            this.Text = "fishingForms";
+            this.Text = "Описание";
             this.Load += new System.EventHandler(this.fishingForms_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

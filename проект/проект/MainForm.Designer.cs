@@ -64,6 +64,10 @@ namespace проект
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
@@ -72,10 +76,6 @@ namespace проект
             this.panel2 = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -90,9 +90,9 @@ namespace проект
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -478,6 +478,54 @@ namespace проект
             this.panel1.Size = new System.Drawing.Size(1142, 111);
             this.panel1.TabIndex = 33;
             // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.linkLabel3);
+            this.panel3.Controls.Add(this.linkLabel2);
+            this.panel3.Controls.Add(this.linkLabel1);
+            this.panel3.Location = new System.Drawing.Point(852, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(233, 108);
+            this.panel3.TabIndex = 38;
+            this.panel3.Visible = false;
+            // 
+            // linkLabel3
+            // 
+            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.linkLabel3.Location = new System.Drawing.Point(3, 71);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(225, 21);
+            this.linkLabel3.TabIndex = 3;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "Как выбрать леску?";
+            this.linkLabel3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.linkLabel2.Location = new System.Drawing.Point(3, 38);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(225, 21);
+            this.linkLabel2.TabIndex = 2;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Как выбрать удилище?";
+            this.linkLabel2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.linkLabel1.Location = new System.Drawing.Point(3, 7);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(225, 21);
+            this.linkLabel1.TabIndex = 1;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Как выбрать катушку?";
+            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // pictureBox14
             // 
             this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
@@ -530,7 +578,7 @@ namespace проект
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 16;
             this.pictureBox13.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox13, "Покахать/скрыть панель");
+            this.toolTip1.SetToolTip(this.pictureBox13, "Показать/скрыть панель");
             this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
             // 
             // panel2
@@ -541,54 +589,6 @@ namespace проект
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1142, 590);
             this.panel2.TabIndex = 34;
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.linkLabel3);
-            this.panel3.Controls.Add(this.linkLabel2);
-            this.panel3.Controls.Add(this.linkLabel1);
-            this.panel3.Location = new System.Drawing.Point(852, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(233, 108);
-            this.panel3.TabIndex = 38;
-            this.panel3.Visible = false;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.linkLabel1.Location = new System.Drawing.Point(3, 7);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(225, 21);
-            this.linkLabel1.TabIndex = 1;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Как выбрать катушку?";
-            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.linkLabel2.Location = new System.Drawing.Point(3, 38);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(225, 21);
-            this.linkLabel2.TabIndex = 2;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Как выбрать удилище?";
-            this.linkLabel2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
-            // 
-            // linkLabel3
-            // 
-            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.linkLabel3.Location = new System.Drawing.Point(3, 71);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(225, 21);
-            this.linkLabel3.TabIndex = 3;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Как выбрать леску?";
-            this.linkLabel3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // MainForm
             // 
@@ -625,7 +625,7 @@ namespace проект
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "MainForm";
-            this.Text = "MainForm";
+            this.Text = "Главная";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.Resize += new System.EventHandler(this.SearchClick);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -643,9 +643,9 @@ namespace проект
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -22,9 +22,25 @@ namespace проект
             label3.Text = words["Леска: "] + Program.ChoosedLb3;
             label4.Text = words["Крючок: "] + Program.ChoosedLb4;
             label5.Text = words["Поплавок: "] + Program.ChoosedLb5;
+            label12.Text = words["Наживка: "] + Program.ChoosedLb12;
             label6.Text = words["Место ловли: "] + Program.ChoosedPlace;
             label8.Text = words["Вот что вы сможете поймать"];
             label10.Text = words["Сколько все это будет стоить: "] + Program.price + words["рублей"];
+
+            if (Program.ChoosedLb1 != "" & Program.ChoosedLb2 != "" &
+                Program.ChoosedLb3 != "" & Program.ChoosedLb4 != "" &
+                Program.ChoosedLb5 != "" & Program.ChoosedLb12 != "" &
+                Program.ChoosedPlace != "")
+            {
+                if (Program.ChoosedPlace == "Волга")
+                    label9.Text = "Жерех, судак, щука, окунь, вобла, красноперка и плотва";
+                if (Program.ChoosedPlace == "Енисей")
+                    label9.Text = "Окунь, ёрш, щука, язь, гольян, осётр, стерлядь, таймень, хариус, нельма, муксун, налим, пелядь, ряпушка и омуль";
+                if (Program.ChoosedPlace == "Обь")
+                    label9.Text = "Карась, сазан, нельма, лещ, окунь, щука";
+            }
+            else
+                label9.Text = "Ничего (Вы не всё выбрали)";
         }
         public Results()
         {
@@ -71,6 +87,16 @@ namespace проект
             label5.Text = label5.Text + Program.ChoosedLb5;
             label10.Text = "Сколько все это будет стоить: " + Program.price + " рублей";
         }
+       
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < MainForm.objList.Count; i++)
+                if (Program.ChoosedLb12 == MainForm.objList[i].name)
+                { Program.price = Program.price - MainForm.objList[i].price; Program.ChoosedLb12 = ""; }
+
+            label12.Text = label12.Text + Program.ChoosedLb12;
+            label10.Text = "Сколько все это будет стоить: " + Program.price + " рублей";
+        }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
@@ -81,7 +107,6 @@ namespace проект
             label4.Text = label4.Text + Program.ChoosedLb4;
             label10.Text = "Сколько все это будет стоить: " + Program.price + " рублей";
         }
-
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
@@ -111,6 +136,7 @@ namespace проект
                 Environment.NewLine + label3.Text +
                 Environment.NewLine + label4.Text +
                 Environment.NewLine + label5.Text +
+                Environment.NewLine + label12.Text +
                 Environment.NewLine + " По цене:" + Program.price + "рублей";
             m.IsBodyHtml = false;
 

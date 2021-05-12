@@ -14,6 +14,7 @@ namespace проект
         public static string ChoosedLb3   = "";
         public static string ChoosedLb4   = "";
         public static string ChoosedLb5   = "";
+        public static string ChoosedLb12  = "";
 
         public static int price = 0;
         public static int cartPrice = 0;

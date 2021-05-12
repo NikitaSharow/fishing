@@ -108,7 +108,7 @@ namespace проект
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "CartForm";
-            this.Text = "CartForm1";
+            this.Text = "Корзина";
             this.Load += new System.EventHandler(this.CartForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

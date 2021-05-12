@@ -146,7 +146,7 @@ namespace проект
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Settings";
-            this.Text = "Settings";
+            this.Text = "Настройки";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

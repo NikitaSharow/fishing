@@ -51,12 +51,15 @@ namespace проект
             this.button1 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -112,7 +115,7 @@ namespace проект
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.label6.Location = new System.Drawing.Point(32, 314);
+            this.label6.Location = new System.Drawing.Point(32, 361);
             this.label6.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(640, 47);
@@ -132,7 +135,7 @@ namespace проект
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.label8.Location = new System.Drawing.Point(32, 403);
+            this.label8.Location = new System.Drawing.Point(32, 455);
             this.label8.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(640, 47);
@@ -143,17 +146,17 @@ namespace проект
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.label9.Location = new System.Drawing.Point(32, 450);
+            this.label9.Location = new System.Drawing.Point(32, 502);
             this.label9.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(640, 47);
+            this.label9.Size = new System.Drawing.Size(640, 113);
             this.label9.TabIndex = 8;
             this.label9.Text = "Ничего";
             // 
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.label10.Location = new System.Drawing.Point(32, 356);
+            this.label10.Location = new System.Drawing.Point(32, 408);
             this.label10.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(640, 47);
@@ -218,7 +221,7 @@ namespace проект
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(5, 314);
+            this.pictureBox6.Location = new System.Drawing.Point(5, 361);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(25, 25);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -261,12 +264,35 @@ namespace проект
             this.textBox1.Size = new System.Drawing.Size(404, 34);
             this.textBox1.TabIndex = 18;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(5, 314);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 20;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.label12.Location = new System.Drawing.Point(32, 314);
+            this.label12.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(640, 47);
+            this.label12.TabIndex = 19;
+            this.label12.Text = "Наживка:";
+            // 
             // Results
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(23F, 46F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(703, 693);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.button1);
@@ -289,13 +315,14 @@ namespace проект
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.25F);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Results";
-            this.Text = "najivka";
+            this.Text = "Итог";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,5 +350,7 @@ namespace проект
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label label12;
     }
 }

@@ -193,7 +193,7 @@ namespace проект
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "NewObj";
-            this.Text = "NewObj";
+            this.Text = "Добавление";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

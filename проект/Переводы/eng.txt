@@ -28,3 +28,4 @@
 Ничего, Nothing
 штука, thing
 рублей, rubles
+Наживка: , Bait: 

@@ -135,7 +135,7 @@ namespace проект
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Registration";
-            this.Text = "registration";
+            this.Text = "Регистрация";
             this.ResumeLayout(false);
             this.PerformLayout();
 

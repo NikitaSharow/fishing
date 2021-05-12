@@ -40,7 +40,7 @@ namespace проект
                 if (model == choosenProduct.name)
                 {
                     product = choosenProduct;
-                    if (Program.Language == "En")
+                    if (Program.Language != "En")
                         label2.Text = label2.Text + product.price + " руб.";
                     else
                         label2.Text = label2.Text + product.price + " rub.";
@@ -72,7 +72,8 @@ namespace проект
                 model == Program.ChoosedLb2 ||
                 model == Program.ChoosedLb3 ||
                 model == Program.ChoosedLb4 ||
-                model == Program.ChoosedLb5)
+                model == Program.ChoosedLb5 ||
+                model == Program.ChoosedLb12)
                 label3.Visible = true;
 
         }
@@ -96,6 +97,10 @@ namespace проект
                 { 
                     Program.price = Program.price + product.price; 
                     buy = true; 
+                }
+                if (product.category == "Удочки")
+                {
+                    MessageBox.Show("Только в режиме корзины");
                 }
                 if (product.category == "Удилища")
                 {
@@ -132,7 +137,13 @@ namespace проект
                             Program.price = Program.price - MainForm.objList[i].price;
                     Program.ChoosedLb5 = product.name;
                 }
-
+                if (product.category == "Наживки")
+                {
+                    for (int i = 0; i < MainForm.objList.Count; i++)
+                        if (Program.ChoosedLb12 == MainForm.objList[i].name && Program.ChoosedLb12 != "")
+                            Program.price = Program.price - MainForm.objList[i].price;
+                    Program.ChoosedLb12 = product.name;
+                }
             }
 
             if (Program.CartMode)

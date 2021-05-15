@@ -29,3 +29,7 @@
 штука, thing
 рублей, rubles
 Наживка: , Bait: 
+Зарегистрироваться, Register
+Ничего (Вы не всё выбрали), Nothing (you have not chosen everything)
+Введите свою почту:, Enter your mail:
+Заказать, To order

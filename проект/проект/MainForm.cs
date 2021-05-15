@@ -58,6 +58,7 @@ namespace проект
             label2.Text = words["Введите название"];
             label1.Text = words["Категория"];
             label14.Text = words["Цена"];
+            button6.Text = words["Зарегистрироваться"];
             button4.Text = words["Добавить"];
             button3.Text = words["Поиск"];
             button2.Text = words["Итог"];

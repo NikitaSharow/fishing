@@ -25,7 +25,10 @@ namespace проект
             label12.Text = words["Наживка: "] + Program.ChoosedLb12;
             label6.Text = words["Место ловли: "] + Program.ChoosedPlace;
             label8.Text = words["Вот что вы сможете поймать"];
+            label9.Text = words["Ничего (Вы не всё выбрали)"];
             label10.Text = words["Сколько все это будет стоить: "] + Program.price + words["рублей"];
+            label11.Text = words["Введите свою почту:"];
+            button1.Text = words["Заказать"];
 
             if (Program.ChoosedLb1 != "" & Program.ChoosedLb2 != "" &
                 Program.ChoosedLb3 != "" & Program.ChoosedLb4 != "" &
@@ -39,8 +42,6 @@ namespace проект
                 if (Program.ChoosedPlace == "Обь")
                     label9.Text = "Карась, сазан, нельма, лещ, окунь, щука";
             }
-            else
-                label9.Text = "Ничего (Вы не всё выбрали)";
         }
         public Results()
         {

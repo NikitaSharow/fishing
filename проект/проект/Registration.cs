@@ -42,16 +42,16 @@ namespace проект
             {
                 if (textBox1.Text != "" & textBox2.Text != "")
                 {
-                    if (textBox1.Text == logPass[i] & textBox2.Text == logPass[i + 1])
+                    if (textBox1.Text == logPass[i])
                     { MessageBox.Show("Вы уже зарегистрированы"); login = textBox1.Text;}
-                    else if (login == "")
-                    {
-                        File.AppendAllText("../../../loginPasswords.txt", Environment.NewLine +
-                        textBox1.Text + "," + textBox2.Text);
-                        MessageBox.Show("Вы зарегистрировались");
-                        login = textBox1.Text;
-                    }
                 }  
+            }
+            if (login == "")
+            {
+                File.AppendAllText("../../../loginPasswords.txt", Environment.NewLine +
+                textBox1.Text + "," + textBox2.Text);
+                MessageBox.Show("Вы зарегистрировались");
+                login = textBox1.Text;
             }
             Close();
         }

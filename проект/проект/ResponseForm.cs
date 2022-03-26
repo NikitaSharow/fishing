@@ -59,7 +59,7 @@ namespace проект
 
 
                 SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-                smtp.Credentials = new NetworkCredential("1337coolmail1337@gmail.com", ",mnbvcxz");
+                smtp.Credentials = new NetworkCredential("1337coolmail1337@gmail.com", "");
                 smtp.EnableSsl = true;
                 smtp.Send(m);
 
